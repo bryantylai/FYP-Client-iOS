@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FYP.xcodeproj">
+      location = "self:FYP-Apollo.xcodeproj">
    </FileRef>
 </Workspace>

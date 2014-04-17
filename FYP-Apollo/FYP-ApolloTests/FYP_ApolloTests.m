@@ -1,18 +1,18 @@
 //
-//  FYPTests.m
-//  FYPTests
+//  FYP_ApolloTests.m
+//  FYP-ApolloTests
 //
-//  Created by Wicky Lim on 3/12/14.
-//  Copyright (c) 2014 Wicky Lim. All rights reserved.
+//  Created by Wicky Lim on 4/17/14.
+//
 //
 
 #import <XCTest/XCTest.h>
 
-@interface FYPTests : XCTestCase
+@interface FYP_ApolloTests : XCTestCase
 
 @end
 
-@implementation FYPTests
+@implementation FYP_ApolloTests
 
 - (void)setUp
 {

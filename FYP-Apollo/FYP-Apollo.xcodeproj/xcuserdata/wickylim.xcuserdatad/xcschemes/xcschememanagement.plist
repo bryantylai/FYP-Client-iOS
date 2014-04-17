@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FYP.xcscheme</key>
+		<key>FYP-Apollo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>EF32D0E318D0ADBC00D16CC9</key>
+		<key>EF01B88718FFE6F6001E29E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF32D0FE18D0ADBC00D16CC9</key>
+		<key>EF01B8A218FFE6F6001E29E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

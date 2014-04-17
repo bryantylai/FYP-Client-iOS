@@ -1,21 +1,21 @@
 //
-//  HFAppDelegate.m
-//  FYP
+//  FYPAppDelegate.m
+//  FYP-Apollo
 //
-//  Created by Wicky Lim on 3/12/14.
-//  Copyright (c) 2014 Wicky Lim. All rights reserved.
+//  Created by Wicky Lim on 4/17/14.
+//
 //
 
-#import "HFAppDelegate.h"
+#import "FYPAppDelegate.h"
 
-@implementation HFAppDelegate
+@implementation FYPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    //[self.window makeKeyAndVisible];
     return YES;
 }
 

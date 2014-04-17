@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF01B88C18FFE6F6001E29E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF01B88B18FFE6F6001E29E9 /* Foundation.framework */; };
+		EF01B88E18FFE6F6001E29E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF01B88D18FFE6F6001E29E9 /* CoreGraphics.framework */; };
+		EF01B89018FFE6F6001E29E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF01B88F18FFE6F6001E29E9 /* UIKit.framework */; };
+		EF01B89618FFE6F6001E29E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF01B89418FFE6F6001E29E9 /* InfoPlist.strings */; };
+		EF01B89818FFE6F6001E29E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01B89718FFE6F6001E29E9 /* main.m */; };
+		EF01B89C18FFE6F6001E29E9 /* FYPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01B89B18FFE6F6001E29E9 /* FYPAppDelegate.m */; };
+		EF01B89E18FFE6F6001E29E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF01B89D18FFE6F6001E29E9 /* Images.xcassets */; };
+		EF01B8A518FFE6F6001E29E9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF01B8A418FFE6F6001E29E9 /* XCTest.framework */; };
+		EF01B8A618FFE6F6001E29E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF01B88B18FFE6F6001E29E9 /* Foundation.framework */; };
+		EF01B8A718FFE6F6001E29E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF01B88F18FFE6F6001E29E9 /* UIKit.framework */; };
+		EF01B8AF18FFE6F6001E29E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF01B8AD18FFE6F6001E29E9 /* InfoPlist.strings */; };
+		EF01B8B118FFE6F6001E29E9 /* FYP_ApolloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01B8B018FFE6F6001E29E9 /* FYP_ApolloTests.m */; };
+		EF01B8BB18FFE714001E29E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF01B8BA18FFE714001E29E9 /* CoreLocation.framework */; };
+		EF01B8BD18FFE7D3001E29E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF01B8BC18FFE7D3001E29E9 /* Main.storyboard */; };
+		EF01B8C018FFE831001E29E9 /* FYPMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01B8BF18FFE831001E29E9 /* FYPMainPageViewController.m */; };
+		EF01B8C318FFEB7D001E29E9 /* FYPLocationGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01B8C218FFEB7D001E29E9 /* FYPLocationGetter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF01B8A818FFE6F6001E29E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF01B88018FFE6F6001E29E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF01B88718FFE6F6001E29E9;
+			remoteInfo = "FYP-Apollo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF01B88818FFE6F6001E29E9 /* FYP-Apollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FYP-Apollo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF01B88B18FFE6F6001E29E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EF01B88D18FFE6F6001E29E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EF01B88F18FFE6F6001E29E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EF01B89318FFE6F6001E29E9 /* FYP-Apollo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FYP-Apollo-Info.plist"; sourceTree = "<group>"; };
+		EF01B89518FFE6F6001E29E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF01B89718FFE6F6001E29E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF01B89918FFE6F6001E29E9 /* FYP-Apollo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FYP-Apollo-Prefix.pch"; sourceTree = "<group>"; };
+		EF01B89A18FFE6F6001E29E9 /* FYPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYPAppDelegate.h; sourceTree = "<group>"; };
+		EF01B89B18FFE6F6001E29E9 /* FYPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYPAppDelegate.m; sourceTree = "<group>"; };
+		EF01B89D18FFE6F6001E29E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EF01B8A318FFE6F6001E29E9 /* FYP-ApolloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FYP-ApolloTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF01B8A418FFE6F6001E29E9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EF01B8AC18FFE6F6001E29E9 /* FYP-ApolloTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FYP-ApolloTests-Info.plist"; sourceTree = "<group>"; };
+		EF01B8AE18FFE6F6001E29E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF01B8B018FFE6F6001E29E9 /* FYP_ApolloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYP_ApolloTests.m; sourceTree = "<group>"; };
+		EF01B8BA18FFE714001E29E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EF01B8BC18FFE7D3001E29E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EF01B8BE18FFE831001E29E9 /* FYPMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPMainPageViewController.h; sourceTree = "<group>"; };
+		EF01B8BF18FFE831001E29E9 /* FYPMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPMainPageViewController.m; sourceTree = "<group>"; };
+		EF01B8C118FFEB7D001E29E9 /* FYPLocationGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPLocationGetter.h; sourceTree = "<group>"; };
+		EF01B8C218FFEB7D001E29E9 /* FYPLocationGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPLocationGetter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF01B88518FFE6F6001E29E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF01B8BB18FFE714001E29E9 /* CoreLocation.framework in Frameworks */,
+				EF01B88E18FFE6F6001E29E9 /* CoreGraphics.framework in Frameworks */,
+				EF01B89018FFE6F6001E29E9 /* UIKit.framework in Frameworks */,
+				EF01B88C18FFE6F6001E29E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF01B8A018FFE6F6001E29E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF01B8A518FFE6F6001E29E9 /* XCTest.framework in Frameworks */,
+				EF01B8A718FFE6F6001E29E9 /* UIKit.framework in Frameworks */,
+				EF01B8A618FFE6F6001E29E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF01B87F18FFE6F6001E29E9 = {
+			isa = PBXGroup;
+			children = (
+				EF01B89118FFE6F6001E29E9 /* FYP-Apollo */,
+				EF01B8AA18FFE6F6001E29E9 /* FYP-ApolloTests */,
+				EF01B88A18FFE6F6001E29E9 /* Frameworks */,
+				EF01B88918FFE6F6001E29E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF01B88918FFE6F6001E29E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF01B88818FFE6F6001E29E9 /* FYP-Apollo.app */,
+				EF01B8A318FFE6F6001E29E9 /* FYP-ApolloTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF01B88A18FFE6F6001E29E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF01B8BA18FFE714001E29E9 /* CoreLocation.framework */,
+				EF01B88B18FFE6F6001E29E9 /* Foundation.framework */,
+				EF01B88D18FFE6F6001E29E9 /* CoreGraphics.framework */,
+				EF01B88F18FFE6F6001E29E9 /* UIKit.framework */,
+				EF01B8A418FFE6F6001E29E9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF01B89118FFE6F6001E29E9 /* FYP-Apollo */ = {
+			isa = PBXGroup;
+			children = (
+				EF01B89A18FFE6F6001E29E9 /* FYPAppDelegate.h */,
+				EF01B89B18FFE6F6001E29E9 /* FYPAppDelegate.m */,
+				EF01B89D18FFE6F6001E29E9 /* Images.xcassets */,
+				EF01B8C118FFEB7D001E29E9 /* FYPLocationGetter.h */,
+				EF01B8C218FFEB7D001E29E9 /* FYPLocationGetter.m */,
+				EF01B89218FFE6F6001E29E9 /* Supporting Files */,
+				EF01B8BC18FFE7D3001E29E9 /* Main.storyboard */,
+				EF01B8BE18FFE831001E29E9 /* FYPMainPageViewController.h */,
+				EF01B8BF18FFE831001E29E9 /* FYPMainPageViewController.m */,
+			);
+			path = "FYP-Apollo";
+			sourceTree = "<group>";
+		};
+		EF01B89218FFE6F6001E29E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF01B89318FFE6F6001E29E9 /* FYP-Apollo-Info.plist */,
+				EF01B89418FFE6F6001E29E9 /* InfoPlist.strings */,
+				EF01B89718FFE6F6001E29E9 /* main.m */,
+				EF01B89918FFE6F6001E29E9 /* FYP-Apollo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF01B8AA18FFE6F6001E29E9 /* FYP-ApolloTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF01B8B018FFE6F6001E29E9 /* FYP_ApolloTests.m */,
+				EF01B8AB18FFE6F6001E29E9 /* Supporting Files */,
+			);
+			path = "FYP-ApolloTests";
+			sourceTree = "<group>";
+		};
+		EF01B8AB18FFE6F6001E29E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF01B8AC18FFE6F6001E29E9 /* FYP-ApolloTests-Info.plist */,
+				EF01B8AD18FFE6F6001E29E9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF01B88718FFE6F6001E29E9 /* FYP-Apollo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF01B8B418FFE6F6001E29E9 /* Build configuration list for PBXNativeTarget "FYP-Apollo" */;
+			buildPhases = (
+				EF01B88418FFE6F6001E29E9 /* Sources */,
+				EF01B88518FFE6F6001E29E9 /* Frameworks */,
+				EF01B88618FFE6F6001E29E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FYP-Apollo";
+			productName = "FYP-Apollo";
+			productReference = EF01B88818FFE6F6001E29E9 /* FYP-Apollo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF01B8A218FFE6F6001E29E9 /* FYP-ApolloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF01B8B718FFE6F6001E29E9 /* Build configuration list for PBXNativeTarget "FYP-ApolloTests" */;
+			buildPhases = (
+				EF01B89F18FFE6F6001E29E9 /* Sources */,
+				EF01B8A018FFE6F6001E29E9 /* Frameworks */,
+				EF01B8A118FFE6F6001E29E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF01B8A918FFE6F6001E29E9 /* PBXTargetDependency */,
+			);
+			name = "FYP-ApolloTests";
+			productName = "FYP-ApolloTests";
+			productReference = EF01B8A318FFE6F6001E29E9 /* FYP-ApolloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF01B88018FFE6F6001E29E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FYP;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					EF01B8A218FFE6F6001E29E9 = {
+						TestTargetID = EF01B88718FFE6F6001E29E9;
+					};
+				};
+			};
+			buildConfigurationList = EF01B88318FFE6F6001E29E9 /* Build configuration list for PBXProject "FYP-Apollo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EF01B87F18FFE6F6001E29E9;
+			productRefGroup = EF01B88918FFE6F6001E29E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF01B88718FFE6F6001E29E9 /* FYP-Apollo */,
+				EF01B8A218FFE6F6001E29E9 /* FYP-ApolloTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF01B88618FFE6F6001E29E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF01B8BD18FFE7D3001E29E9 /* Main.storyboard in Resources */,
+				EF01B89618FFE6F6001E29E9 /* InfoPlist.strings in Resources */,
+				EF01B89E18FFE6F6001E29E9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF01B8A118FFE6F6001E29E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF01B8AF18FFE6F6001E29E9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF01B88418FFE6F6001E29E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF01B8C018FFE831001E29E9 /* FYPMainPageViewController.m in Sources */,
+				EF01B8C318FFEB7D001E29E9 /* FYPLocationGetter.m in Sources */,
+				EF01B89C18FFE6F6001E29E9 /* FYPAppDelegate.m in Sources */,
+				EF01B89818FFE6F6001E29E9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF01B89F18FFE6F6001E29E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF01B8B118FFE6F6001E29E9 /* FYP_ApolloTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF01B8A918FFE6F6001E29E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF01B88718FFE6F6001E29E9 /* FYP-Apollo */;
+			targetProxy = EF01B8A818FFE6F6001E29E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF01B89418FFE6F6001E29E9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF01B89518FFE6F6001E29E9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EF01B8AD18FFE6F6001E29E9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF01B8AE18FFE6F6001E29E9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF01B8B218FFE6F6001E29E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF01B8B318FFE6F6001E29E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF01B8B518FFE6F6001E29E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FYP-Apollo/FYP-Apollo-Prefix.pch";
+				INFOPLIST_FILE = "FYP-Apollo/FYP-Apollo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EF01B8B618FFE6F6001E29E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FYP-Apollo/FYP-Apollo-Prefix.pch";
+				INFOPLIST_FILE = "FYP-Apollo/FYP-Apollo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EF01B8B818FFE6F6001E29E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FYP-Apollo.app/FYP-Apollo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FYP-Apollo/FYP-Apollo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FYP-ApolloTests/FYP-ApolloTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EF01B8B918FFE6F6001E29E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FYP-Apollo.app/FYP-Apollo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FYP-Apollo/FYP-Apollo-Prefix.pch";
+				INFOPLIST_FILE = "FYP-ApolloTests/FYP-ApolloTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF01B88318FFE6F6001E29E9 /* Build configuration list for PBXProject "FYP-Apollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF01B8B218FFE6F6001E29E9 /* Debug */,
+				EF01B8B318FFE6F6001E29E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF01B8B418FFE6F6001E29E9 /* Build configuration list for PBXNativeTarget "FYP-Apollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF01B8B518FFE6F6001E29E9 /* Debug */,
+				EF01B8B618FFE6F6001E29E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF01B8B718FFE6F6001E29E9 /* Build configuration list for PBXNativeTarget "FYP-ApolloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF01B8B818FFE6F6001E29E9 /* Debug */,
+				EF01B8B918FFE6F6001E29E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF01B88018FFE6F6001E29E9 /* Project object */;
+}
