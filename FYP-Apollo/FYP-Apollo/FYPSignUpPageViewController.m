@@ -8,9 +8,14 @@
 
 #import "FYPSignUpPageViewController.h"
 
+
+static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
+
 @interface FYPSignUpPageViewController ()
 {
     BOOL viewIsResized;
+    NSNumber *isError;
+    NSString *message;
 }
 
 @end
@@ -22,6 +27,10 @@
 @synthesize confirmTextField;
 @synthesize phoneTextField;
 @synthesize signupButton;
+@synthesize usernameWarningLabel;
+@synthesize emailWarningLabel;
+@synthesize passwordWarningLabel;
+@synthesize confirmWarningLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +50,13 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+    [usernameWarningLabel setHidden:TRUE];
+    [emailWarningLabel setHidden:TRUE];
+    [passwordWarningLabel setHidden:TRUE];
+    [confirmWarningLabel setHidden:TRUE];
+    
+    [signupButton addTarget:self action:@selector(signupButtonPressed:) forControlEvents:UIControlEventTouchDown];
 }
 
 -(void) keyboardDidShow:(NSNotification *)aNotification
@@ -95,6 +111,62 @@
         [self.view setFrame:frame];
         [UIView commitAnimations];
         viewIsResized = NO;
+    }
+}
+
+- (void) signupButtonPressed: (UIButton *)sender
+{
+    [usernameWarningLabel setHidden:TRUE];
+    [emailWarningLabel setHidden:TRUE];
+    [passwordWarningLabel setHidden:TRUE];
+    [confirmWarningLabel setHidden:TRUE];
+
+    if(self.usernameTextField.text.length == 0)
+        [usernameWarningLabel setHidden:FALSE];
+    if(self.emailTextField.text.length == 0)
+        [emailWarningLabel setHidden:FALSE];
+    if(self.passwordTextField.text.length == 0)
+        [passwordWarningLabel setHidden:FALSE];
+    if(![self.passwordTextField.text isEqualToString:self.confirmTextField.text])
+        [confirmWarningLabel setHidden:FALSE];
+    
+    if([usernameWarningLabel isHidden] && [emailWarningLabel isHidden] && [passwordWarningLabel isHidden] && [confirmWarningLabel isHidden])
+    {
+        NSURL *baseURL = [NSURL URLWithString:BaseURLString];
+        NSDictionary *parameters = @{@"Username": usernameTextField.text, @"Email": usernameTextField.text, @"Password": passwordTextField.text, @"Phone": phoneTextField.text};
+        
+        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        [manager POST:@"api/auth/register" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject)
+         {
+             isError = [responseObject valueForKeyPath:@"IsError"];
+             message = [responseObject valueForKeyPath:@"Message"];
+             
+             if([isError intValue] == 1)
+             {
+                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Signup failed!"
+                                                                     message:message
+                                                                    delegate:nil
+                                                           cancelButtonTitle:@"Ok"
+                                                           otherButtonTitles:nil];
+                 [alertView show];
+             }
+             else
+             {
+                 [self performSegueWithIdentifier:@"unwindFromSignup" sender:sender];
+             }
+         }
+              failure:^(NSURLSessionDataTask *task, NSError *error)
+         {
+             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error signing up user!"
+                                                                 message:[error localizedDescription]
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"Ok"
+                                                       otherButtonTitles:nil];
+             [alertView show];
+         }];
+        
     }
 }
 

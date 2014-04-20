@@ -64,6 +64,13 @@
                                     <segue destination="zde-zF-67e" kind="push" identifier="SignUp" id="Lfj-dn-ZOv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid username or password!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mid-TQ-bjK">
+                                <rect key="frame" x="28" y="318" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -73,6 +80,7 @@
                     <navigationItem key="navigationItem" id="DQ1-Bj-pIC"/>
                     <connections>
                         <outlet property="loginButton" destination="PBj-9M-yTd" id="YVt-4R-gcJ"/>
+                        <outlet property="loginWarningLabel" destination="Mid-TQ-bjK" id="rZ8-ly-ZHJ"/>
                         <outlet property="passwordTextField" destination="ZvR-T3-Z6X" id="dSa-gP-VyJ"/>
                         <outlet property="signupButton" destination="ibT-NR-znS" id="02u-K8-3Mq"/>
                         <outlet property="usernameTextField" destination="RDV-eb-Njx" id="00i-hA-gWF"/>
@@ -133,21 +141,51 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="s4c-eN-xWg" kind="unwind" unwindAction="signUpUnwind:" id="Wsm-a0-NiB"/>
-                                </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username is required!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gb-dM-P6O">
+                                <rect key="frame" x="28" y="120" width="259" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail is required!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-Hm-UuF">
+                                <rect key="frame" x="28" y="169" width="265" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password is required!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjc-tt-ZIq">
+                                <rect key="frame" x="28" y="218" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password mismatch!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcT-5E-0eW">
+                                <rect key="frame" x="28" y="267" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registration" id="h3O-Xs-66D"/>
                     <connections>
                         <outlet property="confirmTextField" destination="vAx-3V-tGv" id="iPi-1M-22T"/>
+                        <outlet property="confirmWarningLabel" destination="RcT-5E-0eW" id="KjT-Oz-aKK"/>
                         <outlet property="emailTextField" destination="7bL-km-Aob" id="neV-lP-R2L"/>
+                        <outlet property="emailWarningLabel" destination="TvU-Hm-UuF" id="kgm-vm-kNk"/>
                         <outlet property="passwordTextField" destination="rm4-Co-g9o" id="TPj-Gh-mcb"/>
+                        <outlet property="passwordWarningLabel" destination="Mjc-tt-ZIq" id="RUI-V3-prR"/>
                         <outlet property="phoneTextField" destination="ICo-4N-YkJ" id="W7s-YO-Bgh"/>
                         <outlet property="signupButton" destination="dM8-Fn-x79" id="dQd-Xj-ngk"/>
                         <outlet property="usernameTextField" destination="WJ0-0S-9iE" id="vkw-xC-WDN"/>
+                        <outlet property="usernameWarningLabel" destination="0Gb-dM-P6O" id="Umm-Fq-M76"/>
+                        <segue destination="s4c-eN-xWg" kind="unwind" identifier="unwindFromSignup" unwindAction="signUpUnwind:" id="aV7-3W-OGO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Af-Dz-F7c" userLabel="First Responder" sceneMemberID="firstResponder"/>

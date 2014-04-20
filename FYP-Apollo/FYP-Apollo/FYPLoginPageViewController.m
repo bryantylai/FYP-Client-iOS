@@ -7,10 +7,14 @@
 //
 
 #import "FYPLoginPageViewController.h"
+#import "FYPSignUpPageViewController.h"
+
+static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
 
 @interface FYPLoginPageViewController ()
 {
     BOOL viewIsResized;
+    NSNumber *isError;
 }
 
 @end
@@ -20,6 +24,7 @@
 @synthesize passwordTextField;
 @synthesize loginButton;
 @synthesize signupButton;
+@synthesize loginWarningLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,6 +45,10 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+    [loginWarningLabel setHidden:TRUE];
+    
+    [loginButton addTarget:self action:@selector(loginButtonPressed:) forControlEvents:UIControlEventTouchDown];
 }
 
 -(void) keyboardDidShow:(NSNotification *)aNotification
@@ -97,6 +106,55 @@
     }
 }
 
+- (void) loginButtonPressed: (UIButton *)sender
+{
+    [self.loginWarningLabel setHidden:TRUE];
+    
+    if(self.usernameTextField.text.length == 0 || self.passwordTextField.text.length == 0)
+    {
+        [self.loginWarningLabel setHidden:FALSE];
+        return;
+    }
+
+    NSURL *baseURL = [NSURL URLWithString:BaseURLString];
+    NSDictionary *parameters = @{@"Username": usernameTextField.text, @"Email": usernameTextField.text, @"Password": passwordTextField.text};
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    [manager POST:@"api/auth/login" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject)
+        {
+            isError = [responseObject valueForKeyPath:@"IsError"];
+            
+            if([isError intValue] == 1)
+            {
+                [self.loginWarningLabel setHidden:FALSE];
+            }
+            else
+            {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login Success!"
+                                                                    message:@"Successfully logged-in"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"Ok"
+                                                          otherButtonTitles:nil];
+                [alertView show];
+                
+                //Redirect to mainpage storyboard here
+            }
+        }
+        failure:^(NSURLSessionDataTask *task, NSError *error)
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error retriving user's details"
+                                                                message:[error localizedDescription]
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }];
+    
+    
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [[event allTouches] anyObject];
@@ -117,7 +175,10 @@
 
 - (IBAction)signUpUnwind:(UIStoryboardSegue *)segue
 {
-
+     FYPSignUpPageViewController *source = [segue sourceViewController];
+    
+     [usernameTextField setText:source.usernameTextField.text];
+     [passwordTextField setText:@""];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

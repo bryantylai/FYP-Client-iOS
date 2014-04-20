@@ -7,6 +7,7 @@
 //
 
 #import "FYPAppDelegate.h"
+#import "AFNetworkActivityIndicatorManager.h"
 
 @implementation FYPAppDelegate
 
@@ -16,6 +17,9 @@
     // Override point for customization after application launch.
     //self.window.backgroundColor = [UIColor whiteColor];
     //[self.window makeKeyAndVisible];
+    
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
     return YES;
 }
 
