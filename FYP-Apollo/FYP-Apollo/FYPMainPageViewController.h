@@ -7,15 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
+#import "ANBlurredTableView.h"
 
-@interface FYPMainPageViewController : UIViewController <CLLocationManagerDelegate>
-{
-    CLLocationManager *locationManager;
-}
+@interface FYPMainPageViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
-@property (retain, nonatomic) CLLocationManager *locationManager;
-@property (weak, nonatomic) IBOutlet UILabel *labelOne;
-@property (weak, nonatomic) IBOutlet UILabel *labelTwo;
+@property (assign) IBOutlet ANBlurredTableView *tableView;
 
 @end

@@ -22,6 +22,13 @@
 		EF01B8BB18FFE714001E29E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF01B8BA18FFE714001E29E9 /* CoreLocation.framework */; };
 		EF01B8BD18FFE7D3001E29E9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF01B8BC18FFE7D3001E29E9 /* Login.storyboard */; };
 		EF01B8C018FFE831001E29E9 /* FYPMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01B8BF18FFE831001E29E9 /* FYPMainPageViewController.m */; };
+		EF231D7A190A8B390000E9BC /* trail-running.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF231D79190A8B390000E9BC /* trail-running.jpg */; };
+		EF231D80190A8C1F0000E9BC /* ANBlurredTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231D7D190A8C1F0000E9BC /* ANBlurredTableView.m */; };
+		EF231D81190A8C1F0000E9BC /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231D7F190A8C1F0000E9BC /* UIImage+BoxBlur.m */; };
+		EF231D84190A8F8F0000E9BC /* ANTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231D83190A8F8F0000E9BC /* ANTableViewCell.m */; };
+		EF231D87190AA0780000E9BC /* UIView+Borders.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231D86190AA0780000E9BC /* UIView+Borders.m */; };
+		EF231D8A190AC00A0000E9BC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF231D89190AC00A0000E9BC /* Accelerate.framework */; };
+		EF231D8C190AC0110000E9BC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF231D8B190AC0110000E9BC /* QuartzCore.framework */; };
 		EF3B9ED7190039AF00810C7F /* FYPLoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3B9ED6190039AF00810C7F /* FYPLoginPageViewController.m */; };
 		EF3B9EDA1901201500810C7F /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3B9ED91901201500810C7F /* MainPage.storyboard */; };
 		EF3B9EE41901270200810C7F /* FYPSignUpPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3B9EE31901270200810C7F /* FYPSignUpPageViewController.m */; };
@@ -75,6 +82,17 @@
 		EF01B8BC18FFE7D3001E29E9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EF01B8BE18FFE831001E29E9 /* FYPMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPMainPageViewController.h; sourceTree = "<group>"; };
 		EF01B8BF18FFE831001E29E9 /* FYPMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPMainPageViewController.m; sourceTree = "<group>"; };
+		EF231D79190A8B390000E9BC /* trail-running.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "trail-running.jpg"; sourceTree = "<group>"; };
+		EF231D7C190A8C1F0000E9BC /* ANBlurredTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBlurredTableView.h; sourceTree = "<group>"; };
+		EF231D7D190A8C1F0000E9BC /* ANBlurredTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBlurredTableView.m; sourceTree = "<group>"; };
+		EF231D7E190A8C1F0000E9BC /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
+		EF231D7F190A8C1F0000E9BC /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
+		EF231D82190A8F8F0000E9BC /* ANTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTableViewCell.h; sourceTree = "<group>"; };
+		EF231D83190A8F8F0000E9BC /* ANTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTableViewCell.m; sourceTree = "<group>"; };
+		EF231D85190AA0780000E9BC /* UIView+Borders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Borders.h"; sourceTree = "<group>"; };
+		EF231D86190AA0780000E9BC /* UIView+Borders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Borders.m"; sourceTree = "<group>"; };
+		EF231D89190AC00A0000E9BC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		EF231D8B190AC0110000E9BC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EF3B9ED5190039AF00810C7F /* FYPLoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPLoginPageViewController.h; sourceTree = "<group>"; };
 		EF3B9ED6190039AF00810C7F /* FYPLoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPLoginPageViewController.m; sourceTree = "<group>"; };
 		EF3B9ED91901201500810C7F /* MainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
@@ -123,6 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF231D8C190AC0110000E9BC /* QuartzCore.framework in Frameworks */,
+				EF231D8A190AC00A0000E9BC /* Accelerate.framework in Frameworks */,
 				EF01B8BB18FFE714001E29E9 /* CoreLocation.framework in Frameworks */,
 				EF01B88E18FFE6F6001E29E9 /* CoreGraphics.framework in Frameworks */,
 				EF01B89018FFE6F6001E29E9 /* UIKit.framework in Frameworks */,
@@ -146,6 +166,7 @@
 		EF01B87F18FFE6F6001E29E9 = {
 			isa = PBXGroup;
 			children = (
+				EF231D7B190A8C1F0000E9BC /* ANBlurredTableView */,
 				EF3B9F1F1903B35F00810C7F /* AFNetworking */,
 				EF3B9F331903B35F00810C7F /* UIKit+AFNetworking */,
 				EF01B89118FFE6F6001E29E9 /* FYP-Apollo */,
@@ -167,6 +188,8 @@
 		EF01B88A18FFE6F6001E29E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF231D8B190AC0110000E9BC /* QuartzCore.framework */,
+				EF231D89190AC00A0000E9BC /* Accelerate.framework */,
 				EF01B8BA18FFE714001E29E9 /* CoreLocation.framework */,
 				EF01B88B18FFE6F6001E29E9 /* Foundation.framework */,
 				EF01B88D18FFE6F6001E29E9 /* CoreGraphics.framework */,
@@ -192,7 +215,9 @@
 		EF01B89218FFE6F6001E29E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF231D88190AA0890000E9BC /* UIView+Borders */,
 				EF01B89318FFE6F6001E29E9 /* FYP-Apollo-Info.plist */,
+				EF231D79190A8B390000E9BC /* trail-running.jpg */,
 				EF01B89418FFE6F6001E29E9 /* InfoPlist.strings */,
 				EF01B89718FFE6F6001E29E9 /* main.m */,
 				EF01B89918FFE6F6001E29E9 /* FYP-Apollo-Prefix.pch */,
@@ -218,6 +243,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EF231D7B190A8C1F0000E9BC /* ANBlurredTableView */ = {
+			isa = PBXGroup;
+			children = (
+				EF231D7C190A8C1F0000E9BC /* ANBlurredTableView.h */,
+				EF231D7D190A8C1F0000E9BC /* ANBlurredTableView.m */,
+				EF231D7E190A8C1F0000E9BC /* UIImage+BoxBlur.h */,
+				EF231D7F190A8C1F0000E9BC /* UIImage+BoxBlur.m */,
+			);
+			name = ANBlurredTableView;
+			path = "FYP-Apollo/ANBlurredTableView";
+			sourceTree = "<group>";
+		};
+		EF231D88190AA0890000E9BC /* UIView+Borders */ = {
+			isa = PBXGroup;
+			children = (
+				EF231D85190AA0780000E9BC /* UIView+Borders.h */,
+				EF231D86190AA0780000E9BC /* UIView+Borders.m */,
+			);
+			name = "UIView+Borders";
+			sourceTree = "<group>";
+		};
 		EF3B9ED819011FFA00810C7F /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +279,8 @@
 		EF3B9EDB1901203E00810C7F /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				EF231D82190A8F8F0000E9BC /* ANTableViewCell.h */,
+				EF231D83190A8F8F0000E9BC /* ANTableViewCell.m */,
 				EF3B9ED91901201500810C7F /* MainPage.storyboard */,
 				EF01B8BE18FFE831001E29E9 /* FYPMainPageViewController.h */,
 				EF01B8BF18FFE831001E29E9 /* FYPMainPageViewController.m */,
@@ -369,6 +417,7 @@
 				EF01B8BD18FFE7D3001E29E9 /* Login.storyboard in Resources */,
 				EF01B89618FFE6F6001E29E9 /* InfoPlist.strings in Resources */,
 				EF01B89E18FFE6F6001E29E9 /* Images.xcassets in Resources */,
+				EF231D7A190A8B390000E9BC /* trail-running.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +442,7 @@
 				EF3B9F481903B35F00810C7F /* AFNetworkReachabilityManager.m in Sources */,
 				EF3B9F531903B35F00810C7F /* UIProgressView+AFNetworking.m in Sources */,
 				EF3B9F4D1903B35F00810C7F /* AFURLSessionManager.m in Sources */,
+				EF231D81190A8C1F0000E9BC /* UIImage+BoxBlur.m in Sources */,
 				EF3B9F4B1903B35F00810C7F /* AFURLRequestSerialization.m in Sources */,
 				EF01B8C018FFE831001E29E9 /* FYPMainPageViewController.m in Sources */,
 				EF3B9F541903B35F00810C7F /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -404,10 +454,13 @@
 				EF3B9F461903B35F00810C7F /* AFHTTPRequestOperationManager.m in Sources */,
 				EF3B9F491903B35F00810C7F /* AFSecurityPolicy.m in Sources */,
 				EF3B9F551903B35F00810C7F /* UIWebView+AFNetworking.m in Sources */,
+				EF231D87190AA0780000E9BC /* UIView+Borders.m in Sources */,
 				EF3B9EE41901270200810C7F /* FYPSignUpPageViewController.m in Sources */,
 				EF01B89818FFE6F6001E29E9 /* main.m in Sources */,
+				EF231D84190A8F8F0000E9BC /* ANTableViewCell.m in Sources */,
 				EF3B9F471903B35F00810C7F /* AFHTTPSessionManager.m in Sources */,
 				EF3B9F4F1903B35F00810C7F /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				EF231D80190A8C1F0000E9BC /* ANBlurredTableView.m in Sources */,
 				EF3B9F4E1903B35F00810C7F /* AFNetworkActivityIndicatorManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

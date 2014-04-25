@@ -19,6 +19,7 @@
     //[self.window makeKeyAndVisible];
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;
 }
