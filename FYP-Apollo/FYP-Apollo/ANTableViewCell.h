@@ -10,6 +10,7 @@
 
 @interface ANTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label;
+//@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong) CALayer *topBorder;
 @property (strong) CALayer *bottomBorder;
 @end

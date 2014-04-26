@@ -21,68 +21,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ANTableViewCell" rowHeight="40" id="EXa-oc-o2F" customClass="ANTableViewCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EXa-oc-o2F" id="2Ay-w6-R9c">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dummy Row" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="YRd-Z0-lTB">
-                                                    <rect key="frame" x="20" y="0.0" width="280" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <size key="shadowOffset" width="0.0" height="1"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="YRd-Z0-lTB" secondAttribute="centerY" id="210-BU-ayb"/>
-                                                <constraint firstItem="YRd-Z0-lTB" firstAttribute="leading" secondItem="2Ay-w6-R9c" secondAttribute="leading" constant="20" id="2Mu-C9-dmt"/>
-                                                <constraint firstAttribute="trailing" secondItem="YRd-Z0-lTB" secondAttribute="trailing" constant="20" id="MHK-dN-3mo"/>
-                                                <constraint firstItem="YRd-Z0-lTB" firstAttribute="top" secondItem="2Ay-w6-R9c" secondAttribute="top" id="Shj-K7-B1D"/>
-                                                <constraint firstAttribute="bottom" secondItem="YRd-Z0-lTB" secondAttribute="bottom" id="wyF-R6-8y1"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="label" destination="YRd-Z0-lTB" id="s5F-Z7-dbJ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ANTableViewCenterBodyCell" rowHeight="50" id="bBk-Wo-3BZ" customClass="ANTableViewCell">
-                                        <rect key="frame" x="0.0" y="62" width="320" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bBk-Wo-3BZ" id="U5i-uH-Zry">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dummy Row" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="AUt-LO-hy8">
-                                                    <rect key="frame" x="20" y="0.0" width="280" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <size key="shadowOffset" width="0.0" height="1"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="AUt-LO-hy8" firstAttribute="top" secondItem="U5i-uH-Zry" secondAttribute="top" id="CYB-DZ-jQw"/>
-                                                <constraint firstAttribute="trailing" secondItem="AUt-LO-hy8" secondAttribute="trailing" constant="20" id="DXW-f4-DSy"/>
-                                                <constraint firstItem="AUt-LO-hy8" firstAttribute="leading" secondItem="U5i-uH-Zry" secondAttribute="leading" constant="20" id="JX7-PF-mHK"/>
-                                                <constraint firstAttribute="centerY" secondItem="AUt-LO-hy8" secondAttribute="centerY" id="l6U-v2-yhC"/>
-                                                <constraint firstAttribute="bottom" secondItem="AUt-LO-hy8" secondAttribute="bottom" id="u8I-l2-3X3"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="label" destination="AUt-LO-hy8" id="CIn-JN-edz"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ANTableViewTitleCell" rowHeight="60" id="gBj-0S-bQr" customClass="ANTableViewCell">
-                                        <rect key="frame" x="0.0" y="112" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gBj-0S-bQr" id="y7t-Br-XM2">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -111,7 +51,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ANTableViewBodyCell" rowHeight="50" id="jze-0b-zWL" customClass="ANTableViewCell">
-                                        <rect key="frame" x="0.0" y="172" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="82" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jze-0b-zWL" id="AB7-WI-p5p">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -120,6 +60,9 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dummy Row" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="dJt-MK-JjL">
                                                     <rect key="frame" x="20" y="0.0" width="280" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" none="YES" image="YES" staticText="YES"/>
+                                                    </accessibility>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -138,6 +81,34 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="label" destination="dJt-MK-JjL" id="YZB-at-0eh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ANTableViewNotificationCell" rowHeight="70" id="dSb-qV-9k7" customClass="ANTableViewCell">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dSb-qV-9k7" id="sXq-8T-63S">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-83-cxR">
+                                                    <rect key="frame" x="20" y="10" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notification" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="210" translatesAutoresizingMaskIntoConstraints="NO" id="heW-oI-m7z">
+                                                    <rect key="frame" x="90" y="5" width="210" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="0LP-83-cxR" id="anD-Fe-FrB"/>
+                                            <outlet property="label" destination="heW-oI-m7z" id="HTA-Sl-euC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

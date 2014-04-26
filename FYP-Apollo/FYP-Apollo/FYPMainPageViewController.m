@@ -24,14 +24,14 @@
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 }
 
-/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
     return self;
-}*/
+}
 
 - (void)viewDidLoad
 {
@@ -46,7 +46,7 @@
     [_tableView setAnimateTintAlpha:YES];
     [_tableView setStartTintAlpha:0.35f];
     [_tableView setEndTintAlpha:0.75f];
-    [_tableView setFramesCount:100];
+    [_tableView setFramesCount:50];
     
     [_tableView setBackgroundImage:[UIImage imageNamed:@"trail-running.jpg"]];
     
@@ -61,7 +61,17 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0;
+    switch(indexPath.row)
+    {
+        case 0:
+            return 60.0;
+            break;
+    
+        default:
+            return 80.0;
+            break;
+    }
+
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,160 +83,82 @@
     NSString *identifier;
     ANTableViewCell * cell;
     
-    if (indexPath.row == 0){
-        identifier = @"ANTableViewCell";
-    }
-    else if (indexPath.row == 1)
+    switch(indexPath.row)
     {
-        identifier = @"ANTableViewCenterBodyCell";
-    }
-    else if (indexPath.row == 3 || indexPath.row == 5 || indexPath.row == 7 || indexPath.row == 9 || indexPath.row == 11 || indexPath.row > 12)
-    {
-        identifier = @"ANTableViewBodyCell";
-    }
-    else if (indexPath.row == 2 || indexPath.row == 4 || indexPath.row == 6 || indexPath.row == 8 || indexPath.row == 10 ||  indexPath.row == 12){
-        identifier = @"ANTableViewTitleCell";
+        case 0:
+            identifier = @"ANTableViewTitleCell";
+            break;
+            
+        case 1:
+            identifier = @"ANTableViewBodyCell";
+            break;
+        
+        default:
+            identifier = @"ANTableViewNotificationCell";
+            break;
     }
     
     cell = [_tableView dequeueReusableCellWithIdentifier:identifier];
     
-    if (indexPath.row == 0)
+    switch(indexPath.row)
     {
-        // Styling
-        [cell.label setText:@"ANBlurredTableView!"];
-    }
-    else if (indexPath.row == 1){
-        // Styling
-        [cell.label setText:@"ANBlurredTableView is a simple and flexible UITableView subclass for blurring and tinting the background image of a UITableView on scroll.\n\n Scroll to see it in action."];
-    }
-    else if (indexPath.row == 2){
-        // Bottom Border
-        if (!cell.bottomBorder){
-            cell.bottomBorder = [cell createBottomBorderWithHeight:1.0f
-                                                             color:[UIColor colorWithWhite:1.0f alpha:0.75f]
-                                                        leftOffset:20
-                                                       rightOffset:0
-                                                   andBottomOffset:0];
-            [cell.layer addSublayer:cell.bottomBorder];
+        case 0:
+        {
+            [cell.label setText:@"Your current BMI"];
+            
+            if (!cell.bottomBorder)
+            {
+                cell.bottomBorder = [cell createBottomBorderWithHeight:1.0f
+                                                                 color:[UIColor colorWithWhite:1.0f alpha:0.75f]
+                                                            leftOffset:20
+                                                           rightOffset:0
+                                                       andBottomOffset:0];
+                [cell.layer addSublayer:cell.bottomBorder];
+            }
+            break;
         }
         
-        // Styling
-        [cell.label setText:@"ANIMATE TINT ALPHA"];
-    }
-    else if (indexPath.row == 3)
-    {
-        // Styling
-        [cell.label setText:@"Animate between two alphas to simulate darkening or lightening while scrolling."];
-    }
-    else if (indexPath.row == 4)
-    {
-        // Bottom Border
-        if (!cell.bottomBorder){
-            cell.bottomBorder = [cell createBottomBorderWithHeight:1.0f
-                                                             color:[UIColor colorWithWhite:1.0f alpha:0.75f]
-                                                        leftOffset:20
-                                                       rightOffset:0
-                                                   andBottomOffset:0];
-            [cell.layer addSublayer:cell.bottomBorder];
+        case 1:
+        {
+            [cell.label setText:[[NSString alloc] initWithFormat: @"Height : %.2f cm\nWeight : %.2f kg\nBMI Reading : %.2f", 123.0, 456.0, 789.0]];
+            break;
         }
+            
+        default:
+        {
+            if (!cell.bottomBorder)
+            {
+                cell.bottomBorder = [cell createBottomBorderWithHeight:0.7f
+                                                                 color:[UIColor colorWithWhite:0.5f alpha:0.2f]
+                                                            leftOffset:20
+                                                           rightOffset:20
+                                                       andBottomOffset:0];
+                [cell.layer addSublayer:cell.bottomBorder];
+            }
+            
+            /*UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(60, cell.bounds.size.height, self.view.bounds.size.width-80, 1)];
+            bottomLineView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.75f];
+            [cell.contentView addSubview:bottomLineView];*/
         
-        // Styling
-        [cell.label setText:@"BACKGROUND RENDERING"];
-    }
-    else if (indexPath.row == 5)
-    {
-        [cell.label setText:@"All frames are rendered in the background. On slower devices, ANBlurredTableView will animate the blur-in to the user's current contentOffset when rendering has finished."];
-    }
-    else if (indexPath.row == 6)
-    {
-        // Bottom Border
-        if (!cell.bottomBorder){
-            cell.bottomBorder = [cell createBottomBorderWithHeight:1.0f
-                                                             color:[UIColor colorWithWhite:1.0f alpha:0.75f]
-                                                        leftOffset:20
-                                                       rightOffset:0
-                                                   andBottomOffset:0];
-            [cell.layer addSublayer:cell.bottomBorder];
+            [cell.label setText:@"Dummy Notification!!!!!!"];
+            
+            UIImageView *imv = [[UIImageView alloc]initWithFrame:CGRectMake(20, 10, 50, 50)];
+            imv.image=[UIImage imageNamed:@"trail-running.jpg"];
+            imv.layer.cornerRadius = imv.frame.size.height/2;
+            imv.layer.masksToBounds = YES;
+            imv.layer.borderWidth = 2;
+            imv.layer.borderColor = [UIColor colorWithWhite:1.0f alpha:0.35f].CGColor;
+            [cell.contentView addSubview:imv];
+            
+            /*[cell.imageView setFrame:CGRectMake(20, 15, 50, 50)];
+            [cell.imageView setImage:[UIImage imageNamed:@"trail-running.jpg"]];
+            [cell.imageView.layer setCornerRadius:cell.imageView.frame.size.height/2];
+            [cell.imageView.layer setMasksToBounds:YES];
+            [cell.imageView.layer setBorderWidth:2];
+            [cell.imageView.layer setBorderColor:[UIColor colorWithWhite:1.0f alpha:0.75f].CGColor];*/
+            
+            break;
         }
-        
-        // Styling
-        [cell.label setText:@"AND MORE!"];
-        
-    }
-    else if (indexPath.row == 7)
-    {
-        // Styling
-        [cell.label setText:@"Customize your blur with custom tints, scroll lengths and more!"];
-    }
-    
-    else if (indexPath.row == 8)
-    {
-        // Bottom Border Setup
-        if (!cell.bottomBorder){
-            cell.bottomBorder = [cell createBottomBorderWithHeight:1.0f
-                                                             color:[UIColor colorWithWhite:1.0f alpha:0.75f]
-                                                        leftOffset:20
-                                                       rightOffset:0
-                                                   andBottomOffset:0];
-            [cell.layer addSublayer:cell.bottomBorder];
-        }
-        
-        // Styling
-        [cell.label setText:@"CONTRIBUTE"];
-        
-    }
-    
-    else if (indexPath.row == 9)
-    {
-        //Styling
-        [cell.label setText:@"Help make ANBlurredTableView by contributing! Find me on Github at github.com/aaronn"];
-    }
-    
-    else if (indexPath.row == 10)
-    {
-        // Bottom Border
-        if (!cell.bottomBorder){
-            cell.bottomBorder = [cell createBottomBorderWithHeight:1.0f
-                                                             color:[UIColor colorWithWhite:1.0f alpha:0.75f]
-                                                        leftOffset:20
-                                                       rightOffset:0
-                                                   andBottomOffset:0];
-            [cell.layer addSublayer:cell.bottomBorder];
-        }
-        
-        // Styling
-        [cell.label setText:@"CREDITS"];
-    }
-    
-    else if (indexPath.row == 11)
-    {
-        //Styling
-        [cell.label setText:@"Made by Aaron Ng. Follow me on Twitter at @aaronykng."];
-    }
-    
-    else if (indexPath.row == 12)
-    {
-        // Border
-        if (!cell.bottomBorder){
-            cell.bottomBorder = [cell createBottomBorderWithHeight:1.0f
-                                                             color:[UIColor colorWithWhite:1.0f alpha:0.75f]
-                                                        leftOffset:20
-                                                       rightOffset:0
-                                                   andBottomOffset:0];
-            [cell.layer addSublayer:cell.bottomBorder];
-        }
-        
-        // Styling
-        [cell.label setText:@"FILLER ROWS"];
-        
-    }
-    
-    else if (indexPath.row > 12){
-        //Styling
-        if (cell == nil){
-            [cell.label setTextAlignment:NSTextAlignmentLeft];
-        }
-        [cell.label setText:@"A Dummy Row"];
     }
     
     return cell;
