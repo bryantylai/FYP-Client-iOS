@@ -13,4 +13,6 @@
 
 @property (assign) IBOutlet ANBlurredTableView *tableView;
 
+- (UIFont *)boldFontFromFont:(UIFont *)font;
+
 @end

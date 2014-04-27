@@ -29,6 +29,7 @@
 		EF231D87190AA0780000E9BC /* UIView+Borders.m in Sources */ = {isa = PBXBuildFile; fileRef = EF231D86190AA0780000E9BC /* UIView+Borders.m */; };
 		EF231D8A190AC00A0000E9BC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF231D89190AC00A0000E9BC /* Accelerate.framework */; };
 		EF231D8C190AC0110000E9BC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF231D8B190AC0110000E9BC /* QuartzCore.framework */; };
+		EF231D91190CB7630000E9BC /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF231D90190CB7630000E9BC /* cat.jpg */; };
 		EF3B9ED7190039AF00810C7F /* FYPLoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3B9ED6190039AF00810C7F /* FYPLoginPageViewController.m */; };
 		EF3B9EDA1901201500810C7F /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3B9ED91901201500810C7F /* MainPage.storyboard */; };
 		EF3B9EE41901270200810C7F /* FYPSignUpPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3B9EE31901270200810C7F /* FYPSignUpPageViewController.m */; };
@@ -93,6 +94,7 @@
 		EF231D86190AA0780000E9BC /* UIView+Borders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Borders.m"; sourceTree = "<group>"; };
 		EF231D89190AC00A0000E9BC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		EF231D8B190AC0110000E9BC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EF231D90190CB7630000E9BC /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 		EF3B9ED5190039AF00810C7F /* FYPLoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPLoginPageViewController.h; sourceTree = "<group>"; };
 		EF3B9ED6190039AF00810C7F /* FYPLoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPLoginPageViewController.m; sourceTree = "<group>"; };
 		EF3B9ED91901201500810C7F /* MainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		EF01B89218FFE6F6001E29E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF231D90190CB7630000E9BC /* cat.jpg */,
 				EF231D88190AA0890000E9BC /* UIView+Borders */,
 				EF01B89318FFE6F6001E29E9 /* FYP-Apollo-Info.plist */,
 				EF231D79190A8B390000E9BC /* trail-running.jpg */,
@@ -413,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF231D91190CB7630000E9BC /* cat.jpg in Resources */,
 				EF3B9EDA1901201500810C7F /* MainPage.storyboard in Resources */,
 				EF01B8BD18FFE7D3001E29E9 /* Login.storyboard in Resources */,
 				EF01B89618FFE6F6001E29E9 /* InfoPlist.strings in Resources */,

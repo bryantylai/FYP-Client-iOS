@@ -139,11 +139,22 @@
             /*UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(60, cell.bounds.size.height, self.view.bounds.size.width-80, 1)];
             bottomLineView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.75f];
             [cell.contentView addSubview:bottomLineView];*/
-        
-            [cell.label setText:@"Dummy Notification!!!!!!"];
+            
+            UIFont *largefont = [cell.label.font fontWithSize:16.0];
+            UIFont *nameFont = [self boldFontFromFont:largefont];
+            NSDictionary *nameDict = [NSDictionary dictionaryWithObject: nameFont forKey:NSFontAttributeName];
+            NSMutableAttributedString *nameString = [[NSMutableAttributedString alloc] initWithString:@"Grumpy " attributes: nameDict];
+            
+            UIFont *activityFont = cell.label.font;
+            NSDictionary *activityDict = [NSDictionary dictionaryWithObject:activityFont forKey:NSFontAttributeName];
+            NSMutableAttributedString *activityString = [[NSMutableAttributedString alloc]initWithString: @"commented on your post" attributes:activityDict];
+            
+            [nameString appendAttributedString:activityString];
+            cell.label.attributedText = nameString;
+            
             
             UIImageView *imv = [[UIImageView alloc]initWithFrame:CGRectMake(20, 10, 50, 50)];
-            imv.image=[UIImage imageNamed:@"trail-running.jpg"];
+            imv.image=[UIImage imageNamed:@"cat.jpg"];
             imv.layer.cornerRadius = imv.frame.size.height/2;
             imv.layer.masksToBounds = YES;
             imv.layer.borderWidth = 2;
@@ -169,6 +180,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIFont *)boldFontFromFont:(UIFont *)font
+{
+    NSString *familyName = [font familyName];
+    NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+    for (NSString *fontName in fontNames)
+    {
+        if ([fontName rangeOfString:@"bold" options:NSCaseInsensitiveSearch].location != NSNotFound)
+        {
+            UIFont *boldFont = [UIFont fontWithName:fontName size:font.pointSize];
+            return boldFont;
+        }
+    }
+    return nil;
 }
 
 /*
