@@ -47,6 +47,11 @@
     [[UITabBar appearance] setBackgroundImage:[self imageWithAlpha:[UIImage imageNamed:@"tabbar.png"] :0.9]];
     [[UITabBar appearance] setSelectionIndicatorImage:[self imageWithAlpha:[UIImage imageNamed:@"tabbar_selected.png"] :0.5]];
     
+    NSDictionary *attributes = @{ NSFontAttributeName: [UIFont fontWithName:@"GillSans-Light" size:20],
+								  NSForegroundColorAttributeName: [UIColor whiteColor]};
+	[[UINavigationBar appearance] setTitleTextAttributes:attributes];
+	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
     return YES;
 }
 
@@ -59,13 +64,14 @@
     mainpageView.tabBarItem.title = @"Home";
     mainpageView.tabBarItem.image = [self imageWithImage:[UIImage imageNamed:@"home.png"]];
     
-    UIStoryboard* testStoryboard = [UIStoryboard storyboardWithName:@"MainPage" bundle:nil];
-    UIViewController* testView = [testStoryboard instantiateInitialViewController];
-    testView.tabBarItem.title = @"Test";
+    UIStoryboard* consultStoryboard = [UIStoryboard storyboardWithName:@"Consultation" bundle:nil];
+    UIViewController* consultView = [consultStoryboard instantiateInitialViewController];
+    consultView.tabBarItem.title = @"Doctors";
+    consultView.tabBarItem.image = [self imageWithImage:[UIImage imageNamed:@"stethoscope.png"]];
     
     tabBarController.viewControllers = [NSArray arrayWithObjects:
     mainpageView,
-    testView,
+    consultView,
     nil];
     
     self.window.rootViewController = tabBarController;

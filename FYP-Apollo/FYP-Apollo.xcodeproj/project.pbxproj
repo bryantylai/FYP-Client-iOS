@@ -55,6 +55,18 @@
 		EF72A6091915190600B3E0AA /* tabbar_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6051915190600B3E0AA /* tabbar_selected@2x.png */; };
 		EF72A60A1915190600B3E0AA /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6061915190600B3E0AA /* tabbar.png */; };
 		EF72A60B1915190600B3E0AA /* tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6071915190600B3E0AA /* tabbar@2x.png */; };
+		EF72A6121915FFC200B3E0AA /* AMWaveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72A60F1915FFC200B3E0AA /* AMWaveTransition.m */; };
+		EF72A6131915FFC200B3E0AA /* AMWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72A6111915FFC200B3E0AA /* AMWaveViewController.m */; };
+		EF72A6151916003E00B3E0AA /* Consultation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6141916003E00B3E0AA /* Consultation.storyboard */; };
+		EF72A6191916114900B3E0AA /* doctor_house.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6161916114900B3E0AA /* doctor_house.jpg */; };
+		EF72A61A1916114900B3E0AA /* doctor_how.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6171916114900B3E0AA /* doctor_how.jpg */; };
+		EF72A61B1916114900B3E0AA /* doctor_hulk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6181916114900B3E0AA /* doctor_hulk.jpg */; };
+		EF72A61F1916154600B3E0AA /* FYPDoctorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72A61E1916154600B3E0AA /* FYPDoctorTableViewCell.m */; };
+		EF72A6221916261700B3E0AA /* FYPConsultationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72A6211916261700B3E0AA /* FYPConsultationViewController.m */; };
+		EF72A62719169ABC00B3E0AA /* FYPDoctorConsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72A62619169ABC00B3E0AA /* FYPDoctorConsultViewController.m */; };
+		EF72A62A19169E4D00B3E0AA /* SegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72A62919169E4D00B3E0AA /* SegmentedButton.m */; };
+		EF72A6311916AC6900B3E0AA /* healthcare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6301916AC6900B3E0AA /* healthcare.jpg */; };
+		EF72A6331916B94500B3E0AA /* stethoscope.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6321916B94500B3E0AA /* stethoscope.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +158,24 @@
 		EF72A6051915190600B3E0AA /* tabbar_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_selected@2x.png"; sourceTree = "<group>"; };
 		EF72A6061915190600B3E0AA /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
 		EF72A6071915190600B3E0AA /* tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar@2x.png"; sourceTree = "<group>"; };
+		EF72A60E1915FFC200B3E0AA /* AMWaveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMWaveTransition.h; sourceTree = "<group>"; };
+		EF72A60F1915FFC200B3E0AA /* AMWaveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMWaveTransition.m; sourceTree = "<group>"; };
+		EF72A6101915FFC200B3E0AA /* AMWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMWaveViewController.h; sourceTree = "<group>"; };
+		EF72A6111915FFC200B3E0AA /* AMWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMWaveViewController.m; sourceTree = "<group>"; };
+		EF72A6141916003E00B3E0AA /* Consultation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Consultation.storyboard; sourceTree = "<group>"; };
+		EF72A6161916114900B3E0AA /* doctor_house.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doctor_house.jpg; sourceTree = "<group>"; };
+		EF72A6171916114900B3E0AA /* doctor_how.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doctor_how.jpg; sourceTree = "<group>"; };
+		EF72A6181916114900B3E0AA /* doctor_hulk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doctor_hulk.jpg; sourceTree = "<group>"; };
+		EF72A61D1916154600B3E0AA /* FYPDoctorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPDoctorTableViewCell.h; sourceTree = "<group>"; };
+		EF72A61E1916154600B3E0AA /* FYPDoctorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPDoctorTableViewCell.m; sourceTree = "<group>"; };
+		EF72A6201916261700B3E0AA /* FYPConsultationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPConsultationViewController.h; sourceTree = "<group>"; };
+		EF72A6211916261700B3E0AA /* FYPConsultationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPConsultationViewController.m; sourceTree = "<group>"; };
+		EF72A62519169ABC00B3E0AA /* FYPDoctorConsultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPDoctorConsultViewController.h; sourceTree = "<group>"; };
+		EF72A62619169ABC00B3E0AA /* FYPDoctorConsultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPDoctorConsultViewController.m; sourceTree = "<group>"; };
+		EF72A62819169E4D00B3E0AA /* SegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SegmentedButton.h; path = "FYP-Apollo/SegmentedButton.h"; sourceTree = "<group>"; };
+		EF72A62919169E4D00B3E0AA /* SegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SegmentedButton.m; path = "FYP-Apollo/SegmentedButton.m"; sourceTree = "<group>"; };
+		EF72A6301916AC6900B3E0AA /* healthcare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = healthcare.jpg; sourceTree = "<group>"; };
+		EF72A6321916B94500B3E0AA /* stethoscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stethoscope.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +208,8 @@
 		EF01B87F18FFE6F6001E29E9 = {
 			isa = PBXGroup;
 			children = (
+				EF72A62B19169E5500B3E0AA /* SegmentedButton */,
+				EF72A60D1915FFC200B3E0AA /* AMWaveTransition */,
 				EF231D7B190A8C1F0000E9BC /* ANBlurredTableView */,
 				EF3B9F1F1903B35F00810C7F /* AFNetworking */,
 				EF3B9F331903B35F00810C7F /* UIKit+AFNetworking */,
@@ -214,13 +246,13 @@
 		EF01B89118FFE6F6001E29E9 /* FYP-Apollo */ = {
 			isa = PBXGroup;
 			children = (
-				EF72A60C1915FEE200B3E0AA /* Field */,
 				EF01B89A18FFE6F6001E29E9 /* FYPAppDelegate.h */,
 				EF01B89B18FFE6F6001E29E9 /* FYPAppDelegate.m */,
 				EF01B89D18FFE6F6001E29E9 /* Images.xcassets */,
-				EF3B9EDB1901203E00810C7F /* MainPage */,
-				EF01B89218FFE6F6001E29E9 /* Supporting Files */,
 				EF3B9ED819011FFA00810C7F /* Login */,
+				EF3B9EDB1901203E00810C7F /* MainPage */,
+				EF72A60C1915FEE200B3E0AA /* Consultation */,
+				EF01B89218FFE6F6001E29E9 /* Supporting Files */,
 			);
 			path = "FYP-Apollo";
 			sourceTree = "<group>";
@@ -228,6 +260,11 @@
 		EF01B89218FFE6F6001E29E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF72A6321916B94500B3E0AA /* stethoscope.png */,
+				EF72A6301916AC6900B3E0AA /* healthcare.jpg */,
+				EF72A6161916114900B3E0AA /* doctor_house.jpg */,
+				EF72A6171916114900B3E0AA /* doctor_how.jpg */,
+				EF72A6181916114900B3E0AA /* doctor_hulk.jpg */,
 				EF72A6041915190600B3E0AA /* tabbar_selected.png */,
 				EF72A6051915190600B3E0AA /* tabbar_selected@2x.png */,
 				EF72A6061915190600B3E0AA /* tabbar.png */,
@@ -357,11 +394,38 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
-		EF72A60C1915FEE200B3E0AA /* Field */ = {
+		EF72A60C1915FEE200B3E0AA /* Consultation */ = {
 			isa = PBXGroup;
 			children = (
+				EF72A61D1916154600B3E0AA /* FYPDoctorTableViewCell.h */,
+				EF72A61E1916154600B3E0AA /* FYPDoctorTableViewCell.m */,
+				EF72A6141916003E00B3E0AA /* Consultation.storyboard */,
+				EF72A6201916261700B3E0AA /* FYPConsultationViewController.h */,
+				EF72A6211916261700B3E0AA /* FYPConsultationViewController.m */,
+				EF72A62519169ABC00B3E0AA /* FYPDoctorConsultViewController.h */,
+				EF72A62619169ABC00B3E0AA /* FYPDoctorConsultViewController.m */,
 			);
-			name = Field;
+			name = Consultation;
+			sourceTree = "<group>";
+		};
+		EF72A60D1915FFC200B3E0AA /* AMWaveTransition */ = {
+			isa = PBXGroup;
+			children = (
+				EF72A60E1915FFC200B3E0AA /* AMWaveTransition.h */,
+				EF72A60F1915FFC200B3E0AA /* AMWaveTransition.m */,
+				EF72A6101915FFC200B3E0AA /* AMWaveViewController.h */,
+				EF72A6111915FFC200B3E0AA /* AMWaveViewController.m */,
+			);
+			path = AMWaveTransition;
+			sourceTree = "<group>";
+		};
+		EF72A62B19169E5500B3E0AA /* SegmentedButton */ = {
+			isa = PBXGroup;
+			children = (
+				EF72A62819169E4D00B3E0AA /* SegmentedButton.h */,
+				EF72A62919169E4D00B3E0AA /* SegmentedButton.m */,
+			);
+			name = SegmentedButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,16 +504,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF231D91190CB7630000E9BC /* cat.jpg in Resources */,
+				EF72A6151916003E00B3E0AA /* Consultation.storyboard in Resources */,
 				EF3B9EDA1901201500810C7F /* MainPage.storyboard in Resources */,
 				EF72A6081915190600B3E0AA /* tabbar_selected.png in Resources */,
 				EF72A6031914EA9F00B3E0AA /* home.png in Resources */,
 				EF01B8BD18FFE7D3001E29E9 /* Login.storyboard in Resources */,
 				EF72A60A1915190600B3E0AA /* tabbar.png in Resources */,
+				EF72A6191916114900B3E0AA /* doctor_house.jpg in Resources */,
+				EF72A61B1916114900B3E0AA /* doctor_hulk.jpg in Resources */,
 				EF01B89618FFE6F6001E29E9 /* InfoPlist.strings in Resources */,
 				EF72A60B1915190600B3E0AA /* tabbar@2x.png in Resources */,
 				EF72A6091915190600B3E0AA /* tabbar_selected@2x.png in Resources */,
 				EF01B89E18FFE6F6001E29E9 /* Images.xcassets in Resources */,
 				EF231D7A190A8B390000E9BC /* trail-running.jpg in Resources */,
+				EF72A6311916AC6900B3E0AA /* healthcare.jpg in Resources */,
+				EF72A61A1916114900B3E0AA /* doctor_how.jpg in Resources */,
+				EF72A6331916B94500B3E0AA /* stethoscope.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,16 +542,21 @@
 				EF3B9F451903B35F00810C7F /* AFHTTPRequestOperation.m in Sources */,
 				EF3B9F511903B35F00810C7F /* UIButton+AFNetworking.m in Sources */,
 				EF3B9F481903B35F00810C7F /* AFNetworkReachabilityManager.m in Sources */,
+				EF72A62A19169E4D00B3E0AA /* SegmentedButton.m in Sources */,
 				EF3B9F531903B35F00810C7F /* UIProgressView+AFNetworking.m in Sources */,
+				EF72A6131915FFC200B3E0AA /* AMWaveViewController.m in Sources */,
 				EF3B9F4D1903B35F00810C7F /* AFURLSessionManager.m in Sources */,
+				EF72A6221916261700B3E0AA /* FYPConsultationViewController.m in Sources */,
 				EF231D81190A8C1F0000E9BC /* UIImage+BoxBlur.m in Sources */,
 				EF3B9F4B1903B35F00810C7F /* AFURLRequestSerialization.m in Sources */,
 				EF01B8C018FFE831001E29E9 /* FYPMainPageViewController.m in Sources */,
+				EF72A61F1916154600B3E0AA /* FYPDoctorTableViewCell.m in Sources */,
 				EF3B9F541903B35F00810C7F /* UIRefreshControl+AFNetworking.m in Sources */,
 				EF3B9F4C1903B35F00810C7F /* AFURLResponseSerialization.m in Sources */,
 				EF3B9ED7190039AF00810C7F /* FYPLoginPageViewController.m in Sources */,
 				EF3B9F521903B35F00810C7F /* UIImageView+AFNetworking.m in Sources */,
 				EF01B89C18FFE6F6001E29E9 /* FYPAppDelegate.m in Sources */,
+				EF72A62719169ABC00B3E0AA /* FYPDoctorConsultViewController.m in Sources */,
 				EF3B9F501903B35F00810C7F /* UIAlertView+AFNetworking.m in Sources */,
 				EF3B9F461903B35F00810C7F /* AFHTTPRequestOperationManager.m in Sources */,
 				EF3B9F491903B35F00810C7F /* AFSecurityPolicy.m in Sources */,
@@ -489,6 +564,7 @@
 				EF231D87190AA0780000E9BC /* UIView+Borders.m in Sources */,
 				EF3B9EE41901270200810C7F /* FYPSignUpPageViewController.m in Sources */,
 				EF01B89818FFE6F6001E29E9 /* main.m in Sources */,
+				EF72A6121915FFC200B3E0AA /* AMWaveTransition.m in Sources */,
 				EF231D84190A8F8F0000E9BC /* ANTableViewCell.m in Sources */,
 				EF3B9F471903B35F00810C7F /* AFHTTPSessionManager.m in Sources */,
 				EF3B9F4F1903B35F00810C7F /* UIActivityIndicatorView+AFNetworking.m in Sources */,

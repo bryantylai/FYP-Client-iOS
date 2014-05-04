@@ -14,4 +14,6 @@
 
 - (void) loginToMainpage;
 
+- (UIImage *)imageWithAlpha: (UIImage *)image :(CGFloat) alpha;
+
 @end

@@ -54,6 +54,9 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
 - (void)viewDidAppear:(BOOL)animated
 {
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+	[[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 -(void) keyboardDidShow:(NSNotification *)aNotification

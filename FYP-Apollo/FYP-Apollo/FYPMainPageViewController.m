@@ -129,7 +129,7 @@
             if (!cell.bottomBorder)
             {
                 cell.bottomBorder = [cell createBottomBorderWithHeight:0.7f
-                                                                 color:[UIColor colorWithWhite:0.5f alpha:0.2f]
+                                                                 color:[UIColor colorWithWhite:0.5f alpha:0.5f]
                                                             leftOffset:20
                                                            rightOffset:20
                                                        andBottomOffset:0];
@@ -158,7 +158,7 @@
             imv.layer.cornerRadius = imv.frame.size.height/2;
             imv.layer.masksToBounds = YES;
             imv.layer.borderWidth = 2;
-            imv.layer.borderColor = [UIColor colorWithWhite:1.0f alpha:0.35f].CGColor;
+            imv.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:0.35f].CGColor;
             [cell.contentView addSubview:imv];
             
             /*[cell.imageView setFrame:CGRectMake(20, 15, 50, 50)];
