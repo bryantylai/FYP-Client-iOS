@@ -50,6 +50,11 @@
 		EF3B9F531903B35F00810C7F /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3B9F401903B35F00810C7F /* UIProgressView+AFNetworking.m */; };
 		EF3B9F541903B35F00810C7F /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3B9F421903B35F00810C7F /* UIRefreshControl+AFNetworking.m */; };
 		EF3B9F551903B35F00810C7F /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3B9F441903B35F00810C7F /* UIWebView+AFNetworking.m */; };
+		EF72A6031914EA9F00B3E0AA /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6021914EA9F00B3E0AA /* home.png */; };
+		EF72A6081915190600B3E0AA /* tabbar_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6041915190600B3E0AA /* tabbar_selected.png */; };
+		EF72A6091915190600B3E0AA /* tabbar_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6051915190600B3E0AA /* tabbar_selected@2x.png */; };
+		EF72A60A1915190600B3E0AA /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6061915190600B3E0AA /* tabbar.png */; };
+		EF72A60B1915190600B3E0AA /* tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6071915190600B3E0AA /* tabbar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +141,11 @@
 		EF3B9F421903B35F00810C7F /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		EF3B9F431903B35F00810C7F /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		EF3B9F441903B35F00810C7F /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		EF72A6021914EA9F00B3E0AA /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		EF72A6041915190600B3E0AA /* tabbar_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_selected.png; sourceTree = "<group>"; };
+		EF72A6051915190600B3E0AA /* tabbar_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_selected@2x.png"; sourceTree = "<group>"; };
+		EF72A6061915190600B3E0AA /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
+		EF72A6071915190600B3E0AA /* tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +214,7 @@
 		EF01B89118FFE6F6001E29E9 /* FYP-Apollo */ = {
 			isa = PBXGroup;
 			children = (
+				EF72A60C1915FEE200B3E0AA /* Field */,
 				EF01B89A18FFE6F6001E29E9 /* FYPAppDelegate.h */,
 				EF01B89B18FFE6F6001E29E9 /* FYPAppDelegate.m */,
 				EF01B89D18FFE6F6001E29E9 /* Images.xcassets */,
@@ -217,6 +228,11 @@
 		EF01B89218FFE6F6001E29E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF72A6041915190600B3E0AA /* tabbar_selected.png */,
+				EF72A6051915190600B3E0AA /* tabbar_selected@2x.png */,
+				EF72A6061915190600B3E0AA /* tabbar.png */,
+				EF72A6071915190600B3E0AA /* tabbar@2x.png */,
+				EF72A6021914EA9F00B3E0AA /* home.png */,
 				EF231D90190CB7630000E9BC /* cat.jpg */,
 				EF231D88190AA0890000E9BC /* UIView+Borders */,
 				EF01B89318FFE6F6001E29E9 /* FYP-Apollo-Info.plist */,
@@ -341,6 +357,13 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		EF72A60C1915FEE200B3E0AA /* Field */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Field;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,8 +441,13 @@
 			files = (
 				EF231D91190CB7630000E9BC /* cat.jpg in Resources */,
 				EF3B9EDA1901201500810C7F /* MainPage.storyboard in Resources */,
+				EF72A6081915190600B3E0AA /* tabbar_selected.png in Resources */,
+				EF72A6031914EA9F00B3E0AA /* home.png in Resources */,
 				EF01B8BD18FFE7D3001E29E9 /* Login.storyboard in Resources */,
+				EF72A60A1915190600B3E0AA /* tabbar.png in Resources */,
 				EF01B89618FFE6F6001E29E9 /* InfoPlist.strings in Resources */,
+				EF72A60B1915190600B3E0AA /* tabbar@2x.png in Resources */,
+				EF72A6091915190600B3E0AA /* tabbar_selected@2x.png in Resources */,
 				EF01B89E18FFE6F6001E29E9 /* Images.xcassets in Resources */,
 				EF231D7A190A8B390000E9BC /* trail-running.jpg in Resources */,
 			);

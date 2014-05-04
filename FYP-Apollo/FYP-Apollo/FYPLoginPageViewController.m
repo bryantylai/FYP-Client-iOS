@@ -51,6 +51,11 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
     [loginButton addTarget:self action:@selector(loginButtonPressed:) forControlEvents:UIControlEventTouchDown];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+}
+
 -(void) keyboardDidShow:(NSNotification *)aNotification
 {
     NSDictionary * userInfo = aNotification.userInfo;
@@ -132,14 +137,21 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
             }
             else
             {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login Success!"
+                /*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login Success!"
                                                                     message:@"Successfully logged-in"
                                                                    delegate:nil
                                                           cancelButtonTitle:@"Ok"
                                                           otherButtonTitles:nil];
-                [alertView show];
+                [alertView show];*/
                 
                 //Redirect to mainpage storyboard here
+                
+                /*UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"MainPage" bundle:nil];
+                UIViewController* initialView = [storyboard instantiateInitialViewController];
+                
+                [self presentViewController:initialView animated:YES completion:nil];*/
+                
+                [AppDelegate loginToMainpage];
             }
         }
         failure:^(NSURLSessionDataTask *task, NSError *error)
@@ -151,8 +163,6 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
                                                       otherButtonTitles:nil];
             [alertView show];
         }];
-    
-    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -175,10 +185,10 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
 
 - (IBAction)signUpUnwind:(UIStoryboardSegue *)segue
 {
-     FYPSignUpPageViewController *source = [segue sourceViewController];
+    FYPSignUpPageViewController *source = [segue sourceViewController];
     
-     [usernameTextField setText:source.usernameTextField.text];
-     [passwordTextField setText:@""];
+    [usernameTextField setText:source.usernameTextField.text];
+    [passwordTextField setText:@""];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

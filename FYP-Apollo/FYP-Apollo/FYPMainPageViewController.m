@@ -145,9 +145,9 @@
             NSDictionary *nameDict = [NSDictionary dictionaryWithObject: nameFont forKey:NSFontAttributeName];
             NSMutableAttributedString *nameString = [[NSMutableAttributedString alloc] initWithString:@"Grumpy " attributes: nameDict];
             
-            UIFont *activityFont = cell.label.font;
+            UIFont *activityFont = [UIFont fontWithName:@"Helvetica Neue" size:14.0];
             NSDictionary *activityDict = [NSDictionary dictionaryWithObject:activityFont forKey:NSFontAttributeName];
-            NSMutableAttributedString *activityString = [[NSMutableAttributedString alloc]initWithString: @"commented on your post" attributes:activityDict];
+            NSMutableAttributedString *activityString = [[NSMutableAttributedString alloc]initWithString: @"commented on your activity" attributes:activityDict];
             
             [nameString appendAttributedString:activityString];
             cell.label.attributedText = nameString;
@@ -174,7 +174,6 @@
     
     return cell;
 }
-
 
 - (void)didReceiveMemoryWarning
 {

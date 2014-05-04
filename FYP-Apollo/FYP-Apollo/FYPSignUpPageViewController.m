@@ -45,6 +45,10 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
     signupButton.layer.cornerRadius = 10;
     signupButton.clipsToBounds = YES;
     
@@ -133,7 +137,7 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
     if([usernameWarningLabel isHidden] && [emailWarningLabel isHidden] && [passwordWarningLabel isHidden] && [confirmWarningLabel isHidden])
     {
         NSURL *baseURL = [NSURL URLWithString:BaseURLString];
-        NSDictionary *parameters = @{@"Username": usernameTextField.text, @"Email": usernameTextField.text, @"Password": passwordTextField.text, @"Phone": phoneTextField.text};
+        NSDictionary *parameters = @{@"Username": usernameTextField.text, @"Email": emailTextField.text, @"Password": passwordTextField.text, @"Phone": phoneTextField.text};
         
         AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
