@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFHTTPSessionManager.h"
 
 @interface FYPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (void) loginToMainpage;
+@property (strong, nonatomic) NSDictionary *userAuthentication;
+
+@property (strong, nonatomic) NSMutableDictionary *userDetails;
+
+@property (strong, nonatomic) NSString *userID;
+
+- (void) updateUsersDetails :(BOOL)firstTime;
+
+- (void) loginToMainpage: (NSDictionary *)authentication :(BOOL)firstTime;
 
 - (UIImage *)imageWithAlpha: (UIImage *)image :(CGFloat) alpha;
 

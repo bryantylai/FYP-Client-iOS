@@ -8,32 +8,12 @@
 
 #import "FYPAppDelegate.h"
 #import "AFNetworkActivityIndicatorManager.h"
+#import "FYPConstants.h"
 
 @implementation FYPAppDelegate
 
+@synthesize userAuthentication;
 
-- (UIImage *)imageWithAlpha: (UIImage *)image :(CGFloat) alpha
-{
-    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0f);
-
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGRect area = CGRectMake(0, 0, image.size.width, image.size.height);
-
-    CGContextScaleCTM(ctx, 1, -1);
-    CGContextTranslateCTM(ctx, 0, -area.size.height);
-
-    CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
-
-    CGContextSetAlpha(ctx, alpha);
-
-    CGContextDrawImage(ctx, area, image.CGImage);
-
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-
-    UIGraphicsEndImageContext();
-
-    return newImage;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -47,16 +27,17 @@
     [[UITabBar appearance] setBackgroundImage:[self imageWithAlpha:[UIImage imageNamed:@"tabbar.png"] :0.9]];
     [[UITabBar appearance] setSelectionIndicatorImage:[self imageWithAlpha:[UIImage imageNamed:@"tabbar_selected.png"] :0.5]];
     
-    NSDictionary *attributes = @{ NSFontAttributeName: [UIFont fontWithName:@"GillSans-Light" size:20],
-								  NSForegroundColorAttributeName: [UIColor whiteColor]};
-	[[UINavigationBar appearance] setTitleTextAttributes:attributes];
-	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    self.userDetails = [[NSMutableDictionary alloc] init];
     
     return YES;
 }
 
-- (void)loginToMainpage
+- (void)loginToMainpage: (NSDictionary *)authentication : (BOOL)firstTime
 {
+    self.userAuthentication = authentication;
+    
+    [self updateUsersDetails :firstTime];
+    
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     UIStoryboard* mainpageStoryboard = [UIStoryboard storyboardWithName:@"MainPage" bundle:nil];
@@ -64,19 +45,122 @@
     mainpageView.tabBarItem.title = @"Home";
     mainpageView.tabBarItem.image = [self imageWithImage:[UIImage imageNamed:@"home.png"]];
     
+    UIStoryboard* runnerStoryboard = [UIStoryboard storyboardWithName:@"Runner" bundle:nil];
+    UIViewController* runnerView = [runnerStoryboard instantiateInitialViewController];
+    runnerView.tabBarItem.title = @"Runner";
+    runnerView.tabBarItem.image = [self imageWithImage:[UIImage imageNamed:@"runner.png"]];
+    
     UIStoryboard* consultStoryboard = [UIStoryboard storyboardWithName:@"Consultation" bundle:nil];
     UIViewController* consultView = [consultStoryboard instantiateInitialViewController];
     consultView.tabBarItem.title = @"Doctors";
     consultView.tabBarItem.image = [self imageWithImage:[UIImage imageNamed:@"stethoscope.png"]];
     
+    UIStoryboard* profileStoryboard = [UIStoryboard storyboardWithName:@"Profile" bundle:nil];
+    UIViewController* profileView = [profileStoryboard instantiateInitialViewController];
+    profileView.tabBarItem.title = @"Profile";
+    profileView.tabBarItem.image = [self imageWithImage:[UIImage imageNamed:@"profile.png"]];
+    
     tabBarController.viewControllers = [NSArray arrayWithObjects:
-    mainpageView,
-    consultView,
-    nil];
+                                        mainpageView,
+                                        runnerView,
+                                        consultView,
+                                        profileView,
+                                        nil];
     
     self.window.rootViewController = tabBarController;
-    [tabBarController setSelectedIndex:1];
-    [tabBarController setSelectedIndex:0];
+    [tabBarController setSelectedIndex:3];
+    
+    if(firstTime)
+    {
+        UINavigationController *nav = (UINavigationController*)tabBarController.selectedViewController;
+        UIViewController* accountSettingsView = [profileStoryboard instantiateViewControllerWithIdentifier:@"accountSettings"];
+        
+        [nav pushViewController:accountSettingsView animated:YES];
+    }
+    else
+        [tabBarController setSelectedIndex:0];
+}
+
+- (void) updateUsersDetails :(BOOL)firstTime
+{
+    if(firstTime)
+    {
+        NSURL *baseURL = [NSURL URLWithString:BaseURLString];
+        
+        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:AppDelegate.userAuthentication[@"username"] password:AppDelegate.userAuthentication[@"password"]];
+        
+        [manager GET:@"api/user/profile" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
+         {
+             self.userID = [responseObject valueForKeyPath:@"Id"];
+         }
+             failure:^(NSURLSessionDataTask *task, NSError *error)
+         {
+             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving User's Details!"
+                                                                 message:[error localizedDescription]
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"Ok"
+                                                       otherButtonTitles:nil];
+             [alertView show];
+         }];
+    }
+    else
+    {
+        NSURL *baseURL = [NSURL URLWithString:BaseURLString];
+        
+        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:AppDelegate.userAuthentication[@"username"] password:AppDelegate.userAuthentication[@"password"]];
+        
+        [manager GET:@"api/user/profile" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
+         {
+             self.userID = [responseObject valueForKeyPath:@"Id"];
+             
+             [self.userDetails setValue:[responseObject valueForKey:@"ProfileImage"] forKey:@"ProfileImage"];
+             [self.userDetails setValue:[responseObject valueForKey:@"CoverImage"] forKey:@"CoverImage"];
+             [self.userDetails setValue:[responseObject valueForKey:@"FirstName"] forKey:@"FirstName"];
+             [self.userDetails setValue:[responseObject valueForKey:@"LastName"] forKey:@"LastName"];
+             [self.userDetails setValue:[responseObject valueForKey:@"AboutMe"] forKey:@"AboutMe"];
+             [self.userDetails setValue:[responseObject valueForKey:@"Gender"] forKey:@"Gender"];
+             [self.userDetails setValue:[responseObject valueForKey:@"DateOfBirth"] forKey:@"DateOfBirth"];
+             [self.userDetails setValue:[responseObject valueForKey:@"Phone"] forKey:@"Phone"];
+             [self.userDetails setValue:[responseObject valueForKey:@"Weight"] forKey:@"Weight"];
+             [self.userDetails setValue:[responseObject valueForKey:@"Height"] forKey:@"Height"];
+         }
+             failure:^(NSURLSessionDataTask *task, NSError *error)
+         {
+             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving User's Details!"
+                                                                 message:[error localizedDescription]
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"Ok"
+                                                       otherButtonTitles:nil];
+             [alertView show];
+         }];
+    }
+}
+
+- (UIImage *)imageWithAlpha: (UIImage *)image :(CGFloat) alpha
+{
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0f);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGRect area = CGRectMake(0, 0, image.size.width, image.size.height);
+    
+    CGContextScaleCTM(ctx, 1, -1);
+    CGContextTranslateCTM(ctx, 0, -area.size.height);
+    
+    CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
+    
+    CGContextSetAlpha(ctx, alpha);
+    
+    CGContextDrawImage(ctx, area, image.CGImage);
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 - (UIImage *)imageWithImage:(UIImage *)image
@@ -84,7 +168,7 @@
     CGRect rect = CGRectMake(0,0,30,30);
     UIGraphicsBeginImageContext(rect.size);
     [image drawInRect:rect];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return newImage;
@@ -98,7 +182,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

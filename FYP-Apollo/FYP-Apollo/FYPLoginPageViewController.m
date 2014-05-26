@@ -8,13 +8,13 @@
 
 #import "FYPLoginPageViewController.h"
 #import "FYPSignUpPageViewController.h"
-
-static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
+#import "FYPConstants.h"
 
 @interface FYPLoginPageViewController ()
 {
     BOOL viewIsResized;
     NSNumber *isError;
+    BOOL _firstTime;
 }
 
 @end
@@ -133,6 +133,7 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
     [manager POST:@"api/auth/login" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject)
         {
             isError = [responseObject valueForKeyPath:@"IsError"];
+            _firstTime = [[responseObject valueForKeyPath:@"NewAccount"] intValue] == 1 ? YES : NO;
             
             if([isError intValue] == 1)
             {
@@ -154,7 +155,7 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
                 
                 [self presentViewController:initialView animated:YES completion:nil];*/
                 
-                [AppDelegate loginToMainpage];
+                [AppDelegate loginToMainpage:@{@"username":self.usernameTextField.text, @"password":self.passwordTextField.text} :_firstTime];
             }
         }
         failure:^(NSURLSessionDataTask *task, NSError *error)

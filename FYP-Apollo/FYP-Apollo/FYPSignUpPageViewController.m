@@ -46,8 +46,11 @@ static NSString * const BaseURLString = @"https://apollo-ws.azurewebsites.net/";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    NSDictionary *attributes = @{ NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size:20],
+								  NSForegroundColorAttributeName: [UIColor blackColor]};
+	[self.navigationController.navigationBar setTitleTextAttributes:attributes];
+	[self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
     
     signupButton.layer.cornerRadius = 10;
     signupButton.clipsToBounds = YES;
