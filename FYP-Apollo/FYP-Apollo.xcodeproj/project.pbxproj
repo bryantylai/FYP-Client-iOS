@@ -85,6 +85,7 @@
 		EF3CB7AF1930E9F0004AF6A4 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CB79E1930E9F0004AF6A4 /* UIImage+WebP.m */; };
 		EF3CB7B01930E9F0004AF6A4 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CB7A01930E9F0004AF6A4 /* UIImageView+HighlightedWebCache.m */; };
 		EF3CB7B11930E9F0004AF6A4 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CB7A21930E9F0004AF6A4 /* UIImageView+WebCache.m */; };
+		EF3CB7B4193377FD004AF6A4 /* FYPBMICalculatorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CB7B3193377FD004AF6A4 /* FYPBMICalculatorTableViewController.m */; };
 		EF5538FF1925074000775445 /* doge.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EF5538FE1925074000775445 /* doge.jpeg */; };
 		EF553902192516F200775445 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EF553901192516F200775445 /* YLProgressBar.m */; };
 		EF72A6031914EA9F00B3E0AA /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6021914EA9F00B3E0AA /* home.png */; };
@@ -254,6 +255,8 @@
 		EF3CB7A01930E9F0004AF6A4 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		EF3CB7A11930E9F0004AF6A4 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		EF3CB7A21930E9F0004AF6A4 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		EF3CB7B2193377FD004AF6A4 /* FYPBMICalculatorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPBMICalculatorTableViewController.h; sourceTree = "<group>"; };
+		EF3CB7B3193377FD004AF6A4 /* FYPBMICalculatorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPBMICalculatorTableViewController.m; sourceTree = "<group>"; };
 		EF5538FE1925074000775445 /* doge.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doge.jpeg; sourceTree = "<group>"; };
 		EF553900192516F200775445 /* YLProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YLProgressBar.h; path = "FYP-Apollo/YLProgressBar.h"; sourceTree = "<group>"; };
 		EF553901192516F200775445 /* YLProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YLProgressBar.m; path = "FYP-Apollo/YLProgressBar.m"; sourceTree = "<group>"; };
@@ -475,6 +478,8 @@
 				EF3CB76B192A5984004AF6A4 /* FYPAboutTextView.m */,
 				EF3CB76D192A6BBD004AF6A4 /* FYPAccountSettingsTableViewController.h */,
 				EF3CB76E192A6BBD004AF6A4 /* FYPAccountSettingsTableViewController.m */,
+				EF3CB7B2193377FD004AF6A4 /* FYPBMICalculatorTableViewController.h */,
+				EF3CB7B3193377FD004AF6A4 /* FYPBMICalculatorTableViewController.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -817,6 +822,7 @@
 				EF3B9F4C1903B35F00810C7F /* AFURLResponseSerialization.m in Sources */,
 				EF3B9ED7190039AF00810C7F /* FYPLoginPageViewController.m in Sources */,
 				EF3B9F521903B35F00810C7F /* UIImageView+AFNetworking.m in Sources */,
+				EF3CB7B4193377FD004AF6A4 /* FYPBMICalculatorTableViewController.m in Sources */,
 				EF01B89C18FFE6F6001E29E9 /* FYPAppDelegate.m in Sources */,
 				EF3CB7A91930E9F0004AF6A4 /* SDWebImageDownloaderOperation.m in Sources */,
 				EF72A62719169ABC00B3E0AA /* FYPDoctorConsultViewController.m in Sources */,

@@ -24,12 +24,12 @@
 @implementation FYPRunnerViewController
 
 @synthesize containerScrollView;
-@synthesize scrollView;
+//@synthesize scrollView;
 @synthesize nameLabel;
 @synthesize levelLabel;
 @synthesize levelProgressBar;
-@synthesize nopathLabel1;
-@synthesize nopathLabel2;
+//@synthesize nopathLabel1;
+//@synthesize nopathLabel2;
 @synthesize lineGraphSegmentedControl;
 @synthesize lineGraph;
 
@@ -68,59 +68,59 @@
     [self.levelProgressBar setProgress:0.99f animated:YES];
     
     
-    //Set-up paths banner
-    [self.nopathLabel1 setHidden:YES];
-    [self.nopathLabel2 setHidden:YES];
-    
-    self.scrollView.delegate = self;
-    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
-    [self.scrollView setShowsHorizontalScrollIndicator:NO];
-    [self.scrollView setScrollEnabled:NO];
-    svSize = self.scrollView.frame.size;
-    
-    
-    NSArray *imagesArray = [[NSArray alloc]initWithObjects:[UIImage imageNamed:@"dummy-profilepic.jpg"] ,
-                            [UIImage imageNamed:@"dummy-coverpic.jpg"] ,
-                            [UIImage imageNamed:@"cat.jpg"] ,
-                            [[MKMapView alloc] init] ,
-                            nil];
-    
-    intMaxLength = [imagesArray count] * svSize.width;
-    
-    
-    int xPosition = 0;
-    
-    for(int i = 0 ; i < [imagesArray count] ; i++)
-    {
-        if([[imagesArray objectAtIndex:i] isKindOfClass:[UIImage class]])
-        {
-            UIImageView *ivImage = [[UIImageView alloc] initWithFrame:CGRectMake(xPosition, 0, svSize.width, svSize.height)];
-            
-            ivImage.image = [imagesArray objectAtIndex:i];
-            
-            [self.scrollView addSubview:ivImage];
-        }
-        else
-        {
-            MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(xPosition, 0, svSize.width, svSize.height)];
-            
-            [self.scrollView addSubview:mapView];
-        }
-        
-        xPosition += svSize.width;
-    }
-    
-    intStartPosition = 0;
-    
-    UISwipeGestureRecognizer *recognizer;
-    
-    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
-    [[self scrollView] addGestureRecognizer:recognizer];
-    
-    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
-    [[self scrollView] addGestureRecognizer:recognizer];
+    //Set-up paths banner -- To Be Removed
+//    [self.nopathLabel1 setHidden:YES];
+//    [self.nopathLabel2 setHidden:YES];
+//    
+//    self.scrollView.delegate = self;
+//    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+//    [self.scrollView setShowsHorizontalScrollIndicator:NO];
+//    [self.scrollView setScrollEnabled:NO];
+//    svSize = self.scrollView.frame.size;
+//    
+//    
+//    NSArray *imagesArray = [[NSArray alloc]initWithObjects:[UIImage imageNamed:@"dummy-profilepic.jpg"] ,
+//                            [UIImage imageNamed:@"dummy-coverpic.jpg"] ,
+//                            [UIImage imageNamed:@"cat.jpg"] ,
+//                            [[MKMapView alloc] init] ,
+//                            nil];
+//    
+//    intMaxLength = [imagesArray count] * svSize.width;
+//    
+//    
+//    int xPosition = 0;
+//    
+//    for(int i = 0 ; i < [imagesArray count] ; i++)
+//    {
+//        if([[imagesArray objectAtIndex:i] isKindOfClass:[UIImage class]])
+//        {
+//            UIImageView *ivImage = [[UIImageView alloc] initWithFrame:CGRectMake(xPosition, 0, svSize.width, svSize.height)];
+//            
+//            ivImage.image = [imagesArray objectAtIndex:i];
+//            
+//            [self.scrollView addSubview:ivImage];
+//        }
+//        else
+//        {
+//            MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(xPosition, 0, svSize.width, svSize.height)];
+//            
+//            [self.scrollView addSubview:mapView];
+//        }
+//        
+//        xPosition += svSize.width;
+//    }
+//    
+//    intStartPosition = 0;
+//    
+//    UISwipeGestureRecognizer *recognizer;
+//    
+//    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+//    [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
+//    [[self scrollView] addGestureRecognizer:recognizer];
+//    
+//    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+//    [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+//    [[self scrollView] addGestureRecognizer:recognizer];
     
     
     //Set-up distance graph
@@ -154,35 +154,35 @@
     self.containerScrollView.contentSize = CGSizeMake(320, 665);
 }
 
--(IBAction)handleSwipeFrom:(UISwipeGestureRecognizer*)sender
-{
-    if (sender.direction == UISwipeGestureRecognizerDirectionLeft)
-    {
-        if(intMaxLength <= intStartPosition + svSize.width)
-        {
-            return;
-        }
-        else
-        {
-            intStartPosition += svSize.width;
-            [self.scrollView setContentOffset:CGPointMake(intStartPosition,0) animated:YES];
-        }
-
-    }
-    else if(sender.direction == UISwipeGestureRecognizerDirectionRight)
-    {
-        if(0 > intStartPosition - svSize.width)
-        {
-            return;
-        }
-        else
-        {
-            intStartPosition -= svSize.width;
-            [self.scrollView setContentOffset:CGPointMake(intStartPosition,0) animated:YES];
-        }
-
-    }
-}
+//-(IBAction)handleSwipeFrom:(UISwipeGestureRecognizer*)sender
+//{
+//    if (sender.direction == UISwipeGestureRecognizerDirectionLeft)
+//    {
+//        if(intMaxLength <= intStartPosition + svSize.width)
+//        {
+//            return;
+//        }
+//        else
+//        {
+//            intStartPosition += svSize.width;
+//            [self.scrollView setContentOffset:CGPointMake(intStartPosition,0) animated:YES];
+//        }
+//
+//    }
+//    else if(sender.direction == UISwipeGestureRecognizerDirectionRight)
+//    {
+//        if(0 > intStartPosition - svSize.width)
+//        {
+//            return;
+//        }
+//        else
+//        {
+//            intStartPosition -= svSize.width;
+//            [self.scrollView setContentOffset:CGPointMake(intStartPosition,0) animated:YES];
+//        }
+//
+//    }
+//}
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph
 {

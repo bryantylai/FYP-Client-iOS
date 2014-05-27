@@ -166,7 +166,7 @@
              if([_isError intValue] == 1)
              {
                  [_hud setLabelText:@"Editting error!"];
-                 [_hud hide:YES afterDelay:1.0f];
+                 [_hud hide:YES afterDelay:1.5f];
                  [self.navigationItem.leftBarButtonItem setEnabled:YES];
                  [self.navigationItem.rightBarButtonItem setEnabled:YES];
                  NSLog(@"%@", _message);
@@ -174,7 +174,7 @@
              else
              {
                  [_hud setLabelText:@"Completed."];
-                 [_hud hide:YES afterDelay:1.0f];
+                 [_hud hide:YES afterDelay:1.5f];
                  
                  [AppDelegate updateUsersDetails:NO];
                  
@@ -185,7 +185,7 @@
          }
               failure:^(NSURLSessionDataTask *task, NSError *error)
          {
-             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error signing up user!"
+             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error updating user's details!"
                                                                  message:[error localizedDescription]
                                                                 delegate:nil
                                                        cancelButtonTitle:@"Ok"
@@ -196,7 +196,7 @@
     else
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Unable to Proceed."
-                                                            message:@"Please fill up required fields"
+                                                            message:@"Please fill up the required fields."
                                                            delegate:nil
                                                   cancelButtonTitle:@"Ok"
                                                   otherButtonTitles:nil];
