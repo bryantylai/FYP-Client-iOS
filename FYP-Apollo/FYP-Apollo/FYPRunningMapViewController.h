@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "CrumbPath.h"
 #import "CrumbPathView.h"
+#import "MBProgressHUD.h"
 
 @interface FYPRunningMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
@@ -19,5 +20,7 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CrumbPath *crumbs;
 @property (nonatomic, strong) CrumbPathView *crumbView;
+
+@property NSDictionary *_updatedAvatar;
 
 @end

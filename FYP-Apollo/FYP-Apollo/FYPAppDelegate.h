@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) NSMutableDictionary *userDetails;
 
+@property (strong, nonatomic) NSMutableDictionary *avatarDetails;
+
 @property (strong, nonatomic) NSString *userID;
 
 - (void) updateUsersDetails :(BOOL)firstTime;
