@@ -21,6 +21,7 @@
 @synthesize locationLabel;
 @synthesize buttonView;
 @synthesize dict;
+@synthesize callButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,9 +49,12 @@
     self.imageView.layer.borderWidth = 2;
     self.imageView.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:0.35f].CGColor;
     
-    [buttonView initWithTitles:[NSArray arrayWithObjects:@"Make Appointment", @"Leave Message", nil] buttonTintNormal:[UIColor colorWithRed:0. green:0. blue:1.0 alpha:0.8] buttonTintPressed:[UIColor colorWithRed:0. green:0. blue:1.0 alpha:0.6] actionHandler:^(int buttonIndex) {
-        NSLog(@"Button pressed at index %i", buttonIndex);
-    }];
+    callButton.layer.cornerRadius = 10;
+    callButton.clipsToBounds = YES;
+    
+//    [buttonView initWithTitles:[NSArray arrayWithObjects:@"Make Appointment", @"Leave Message", nil] buttonTintNormal:[UIColor colorWithRed:0. green:0. blue:1.0 alpha:0.8] buttonTintPressed:[UIColor colorWithRed:0. green:0. blue:1.0 alpha:0.6] actionHandler:^(int buttonIndex) {
+//        NSLog(@"Button pressed at index %i", buttonIndex);
+//    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated

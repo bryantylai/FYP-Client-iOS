@@ -39,6 +39,7 @@
     
     [self updateUsersDetails :firstTime];
     [self updateAvatarDetails :firstTime];
+    [self updateProfessionalsList];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
@@ -164,15 +165,13 @@
         
         [manager GET:@"api/avatar/profile" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
          {
-             [self.avatarDetails setValue:[responseObject valueForKey:@"Nama"] forKey:@"Name"];
+             [self.avatarDetails setValue:@"Doge" forKey:@"Name"];
              [self.avatarDetails setValue:[responseObject valueForKey:@"Level"] forKey:@"Level"];
              [self.avatarDetails setValue:[responseObject valueForKey:@"Experience"] forKey:@"Experience"];
              [self.avatarDetails setValue:[[NSArray alloc] initWithArray:[responseObject objectForKey:@"All"]] forKey:@"All"];
              [self.avatarDetails setValue:[[NSArray alloc] initWithArray:[responseObject objectForKey:@"Month"]] forKey:@"Month"];
              [self.avatarDetails setValue:[[NSArray alloc] initWithArray:[responseObject objectForKey:@"Week"]] forKey:@"Week"];
              [self.avatarDetails setValue:[[NSArray alloc] initWithArray:[responseObject objectForKey:@"Day"]] forKey:@"Day"];
-             
-             NSLog(@"Ava Det : %@", self.avatarDetails);
          }
              failure:^(NSURLSessionDataTask *task, NSError *error)
          {
@@ -184,6 +183,29 @@
              [alertView show];
          }];
     }
+}
+
+- (void)updateProfessionalsList
+{
+    NSURL *baseURL = [NSURL URLWithString:BaseURLString];
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:AppDelegate.userAuthentication[@"username"] password:AppDelegate.userAuthentication[@"password"]];
+    
+    [manager GET:@"api/doctor/fetch-all" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
+     {
+        self.doctorArray = [[NSArray alloc] initWithArray:responseObject];
+     }
+         failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Doctors' List!"
+                                                             message:[error localizedDescription]
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"Ok"
+                                                   otherButtonTitles:nil];
+         [alertView show];
+     }];
 }
 
 - (UIImage *)imageWithAlpha: (UIImage *)image :(CGFloat) alpha

@@ -21,7 +21,8 @@
     NSMutableArray *_path;
     double _distance;
     double _totalTime;
-    double _averageSpeed;}
+    double _averageSpeed;
+}
 
 @end
 

@@ -105,6 +105,10 @@
 		EF72A62A19169E4D00B3E0AA /* SegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF72A62919169E4D00B3E0AA /* SegmentedButton.m */; };
 		EF72A6311916AC6900B3E0AA /* healthcare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6301916AC6900B3E0AA /* healthcare.jpg */; };
 		EF72A6331916B94500B3E0AA /* stethoscope.png in Resources */ = {isa = PBXBuildFile; fileRef = EF72A6321916B94500B3E0AA /* stethoscope.png */; };
+		EF7CAE6D193771D600460318 /* FYPRefineSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7CAE6C193771D600460318 /* FYPRefineSearchTableViewCell.m */; };
+		EF7CAE70193771F100460318 /* FYPSearchBarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7CAE6F193771F100460318 /* FYPSearchBarTableViewCell.m */; };
+		EF7CAE731937C77000460318 /* checked-checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7CAE711937C77000460318 /* checked-checkbox.png */; };
+		EF7CAE741937C77000460318 /* unchecked-checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7CAE721937C77000460318 /* unchecked-checkbox.png */; };
 		EFC42A051927742C004BFD2C /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC42A021927742C004BFD2C /* CrumbPath.m */; };
 		EFC42A061927742C004BFD2C /* CrumbPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC42A041927742C004BFD2C /* CrumbPathView.m */; };
 		EFC42A0919277545004BFD2C /* FYPRunningMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC42A0819277545004BFD2C /* FYPRunningMapViewController.m */; };
@@ -283,6 +287,12 @@
 		EF72A62919169E4D00B3E0AA /* SegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SegmentedButton.m; path = "FYP-Apollo/SegmentedButton.m"; sourceTree = "<group>"; };
 		EF72A6301916AC6900B3E0AA /* healthcare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = healthcare.jpg; sourceTree = "<group>"; };
 		EF72A6321916B94500B3E0AA /* stethoscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stethoscope.png; sourceTree = "<group>"; };
+		EF7CAE6B193771D600460318 /* FYPRefineSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPRefineSearchTableViewCell.h; sourceTree = "<group>"; };
+		EF7CAE6C193771D600460318 /* FYPRefineSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPRefineSearchTableViewCell.m; sourceTree = "<group>"; };
+		EF7CAE6E193771F100460318 /* FYPSearchBarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYPSearchBarTableViewCell.h; sourceTree = "<group>"; };
+		EF7CAE6F193771F100460318 /* FYPSearchBarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYPSearchBarTableViewCell.m; sourceTree = "<group>"; };
+		EF7CAE711937C77000460318 /* checked-checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checked-checkbox.png"; sourceTree = "<group>"; };
+		EF7CAE721937C77000460318 /* unchecked-checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unchecked-checkbox.png"; sourceTree = "<group>"; };
 		EFC42A011927742C004BFD2C /* CrumbPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrumbPath.h; path = "FYP-Apollo/CrumbPath/CrumbPath.h"; sourceTree = "<group>"; };
 		EFC42A021927742C004BFD2C /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrumbPath.m; path = "FYP-Apollo/CrumbPath/CrumbPath.m"; sourceTree = "<group>"; };
 		EFC42A031927742C004BFD2C /* CrumbPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrumbPathView.h; path = "FYP-Apollo/CrumbPath/CrumbPathView.h"; sourceTree = "<group>"; };
@@ -386,6 +396,8 @@
 		EF01B89218FFE6F6001E29E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF7CAE711937C77000460318 /* checked-checkbox.png */,
+				EF7CAE721937C77000460318 /* unchecked-checkbox.png */,
 				EF3CB781192F96BC004AF6A4 /* runner.png */,
 				EF3CB766192A5274004AF6A4 /* bottomline.png */,
 				EF3CB761192A37F9004AF6A4 /* camera.png */,
@@ -636,6 +648,10 @@
 				EF72A6211916261700B3E0AA /* FYPConsultationViewController.m */,
 				EF72A62519169ABC00B3E0AA /* FYPDoctorConsultViewController.h */,
 				EF72A62619169ABC00B3E0AA /* FYPDoctorConsultViewController.m */,
+				EF7CAE6B193771D600460318 /* FYPRefineSearchTableViewCell.h */,
+				EF7CAE6C193771D600460318 /* FYPRefineSearchTableViewCell.m */,
+				EF7CAE6E193771F100460318 /* FYPSearchBarTableViewCell.h */,
+				EF7CAE6F193771F100460318 /* FYPSearchBarTableViewCell.m */,
 			);
 			name = Consultation;
 			sourceTree = "<group>";
@@ -759,6 +775,7 @@
 				EF72A61B1916114900B3E0AA /* doctor_hulk.jpg in Resources */,
 				EF3CB782192F96BC004AF6A4 /* runner.png in Resources */,
 				EF01B89618FFE6F6001E29E9 /* InfoPlist.strings in Resources */,
+				EF7CAE731937C77000460318 /* checked-checkbox.png in Resources */,
 				EF72A60B1915190600B3E0AA /* tabbar@2x.png in Resources */,
 				EF28949A1923C19E00A9D410 /* Profile.storyboard in Resources */,
 				EF72A6091915190600B3E0AA /* tabbar_selected@2x.png in Resources */,
@@ -768,6 +785,7 @@
 				EF5538FF1925074000775445 /* doge.jpeg in Resources */,
 				EF231D7A190A8B390000E9BC /* trail-running.jpg in Resources */,
 				EF3CB767192A5274004AF6A4 /* bottomline.png in Resources */,
+				EF7CAE741937C77000460318 /* unchecked-checkbox.png in Resources */,
 				EF72A6311916AC6900B3E0AA /* healthcare.jpg in Resources */,
 				EF72A61A1916114900B3E0AA /* doctor_how.jpg in Resources */,
 				EF3CB762192A37F9004AF6A4 /* camera.png in Resources */,
@@ -809,6 +827,7 @@
 				EF231D81190A8C1F0000E9BC /* UIImage+BoxBlur.m in Sources */,
 				EF2894991923C19E00A9D410 /* FYPProfileViewController.m in Sources */,
 				EF3CB7B01930E9F0004AF6A4 /* UIImageView+HighlightedWebCache.m in Sources */,
+				EF7CAE70193771F100460318 /* FYPSearchBarTableViewCell.m in Sources */,
 				EFC42A051927742C004BFD2C /* CrumbPath.m in Sources */,
 				EFC42A0919277545004BFD2C /* FYPRunningMapViewController.m in Sources */,
 				EF3B9F4B1903B35F00810C7F /* AFURLRequestSerialization.m in Sources */,
@@ -832,6 +851,7 @@
 				EF3B9F491903B35F00810C7F /* AFSecurityPolicy.m in Sources */,
 				EF3B9F551903B35F00810C7F /* UIWebView+AFNetworking.m in Sources */,
 				EF3CB76F192A6BBD004AF6A4 /* FYPAccountSettingsTableViewController.m in Sources */,
+				EF7CAE6D193771D600460318 /* FYPRefineSearchTableViewCell.m in Sources */,
 				EF231D87190AA0780000E9BC /* UIView+Borders.m in Sources */,
 				EF3CB7A51930E9F0004AF6A4 /* SDImageCache.m in Sources */,
 				EF3CB7AA1930E9F0004AF6A4 /* SDWebImageManager.m in Sources */,

@@ -321,6 +321,7 @@
         <!--View Controller - Badges-->
         <scene sceneID="FTW-3k-ZLo">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bA-ay-Gd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="7YN-lI-IFP" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rFk-ci-X8I"/>
@@ -333,7 +334,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Badges" id="pWQ-Ig-wvO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5bA-ay-Gd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1012" y="-34"/>
         </scene>

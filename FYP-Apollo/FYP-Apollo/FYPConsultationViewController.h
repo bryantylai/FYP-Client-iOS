@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FYPConsultationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
+@interface FYPConsultationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

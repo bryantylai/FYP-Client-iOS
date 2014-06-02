@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fjq-CH-eX3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fjq-CH-eX3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoS-fP-W94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1207" y="14"/>
+            <point key="canvasLocation" x="-993" y="14"/>
         </scene>
         <!--Login Page View Controller-->
         <scene sceneID="t1J-vm-og4">
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9g-Rm-EtZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-676" y="14"/>
+            <point key="canvasLocation" x="-462" y="14"/>
         </scene>
         <!--Sign Up Page View Controller - Registration-->
         <scene sceneID="KaP-Kf-k0z">
@@ -191,7 +191,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Af-Dz-F7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="s4c-eN-xWg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-223" y="14"/>
+            <point key="canvasLocation" x="-9" y="14"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

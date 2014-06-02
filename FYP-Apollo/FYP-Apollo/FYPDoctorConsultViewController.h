@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet SegmentedButton *buttonView;
 @property (strong, nonatomic) NSDictionary* dict;
+@property (weak, nonatomic) IBOutlet UIButton *callButton;
 
 @end

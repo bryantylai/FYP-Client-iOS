@@ -19,6 +19,10 @@
 
 @property (strong, nonatomic) NSMutableDictionary *avatarDetails;
 
+@property (strong, nonatomic) NSArray *trainerArray;
+
+@property (strong, nonatomic) NSArray *doctorArray;
+
 @property (strong, nonatomic) NSString *userID;
 
 - (void) updateUsersDetails :(BOOL)firstTime;
